@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "test": "gulp build && ls dest",
+    "start": "gulp",
     "build": "gulp build",
     "deploy": "gulp deploy",
-    "server": "gulp"
+    "test": "gulp build && ls dest"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
