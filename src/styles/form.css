@@ -12,8 +12,8 @@
 .form::after {
     position: absolute;
     bottom: 0;
-	left: 50%;
-	margin-left: -1.1em;
+    left: 50%;
+    margin-left: -1.1em;
     width: 2.2em;
     height: 2em;
     background: url(images/slash.svg) 100% 0 no-repeat;
@@ -50,7 +50,7 @@
 
 @media (min-width: 848px) {
     .form {
-		font-size: 1.5rem;
+        font-size: 1.5rem;
         }
     }
 
@@ -138,23 +138,23 @@
 /* Button */
 
 .form__button {
-	margin: 0;
-	padding: 1.1em 0 1em;
-	border-radius: 0.25em;
-	border: 0.125em solid #fff;
+    margin: 0;
+    padding: 1.1em 0 1em;
+    border-radius: 0.25em;
+    border: 0.125em solid #fff;
     background: #fff;
-	color: #00e2b5;
-	font-family: inherit;
-	font-size: 1em;
-	}
+    color: #00e2b5;
+    font-family: inherit;
+    font-size: 1em;
+    }
 .form__button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-	}
+    padding: 0;
+    border: 0;
+    }
 .form__button:hover,
 .form__button:focus {
-	outline: none;
-	}
+    outline: none;
+    }
 
 @media (min-width: 480px) {
     .form__button {

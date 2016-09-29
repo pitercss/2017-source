@@ -1,8 +1,8 @@
 /* Sizing */
 
 *, *::before, *::after {
-	box-sizing: border-box;
-	}
+    box-sizing: border-box;
+    }
 
 /* Page */
 
@@ -15,11 +15,11 @@
 .page__body {
     position: relative;
     margin: auto;
-	padding: 2em 1.5em 1.5em;
+    padding: 2em 1.5em 1.5em;
     max-width: 1280px;
     color: #fff;
-	line-height: 1;
-	font-family: Gotham Pro, sans-serif;
+    line-height: 1;
+    font-family: Gotham Pro, sans-serif;
     }
 
 /* Lock */
@@ -42,6 +42,6 @@
 
 @media (min-width: 848px) {
     .page__body {
-		font-size: 2rem;
+        font-size: 2rem;
         }
     }
