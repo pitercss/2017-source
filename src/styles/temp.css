@@ -1,0 +1,79 @@
+/* Banner */
+
+.banner {
+    position: relative;
+    margin: 0 auto -0.25em;
+    padding: 0.7em 0 2.3em;
+    max-width: 848px;
+    background: url(images/hand@1x.png) 100% 0 / auto 100% no-repeat;
+    }
+
+@media (min-resolution: 2dppx) {
+    .banner {
+        background-image: url(images/hand@2x.png);
+        }
+    }
+
+@media (max-width: 320px) {
+    .banner {
+        font-size: 3.45rem;
+        }
+    }
+
+@media (min-width: 320px) {
+    .banner {
+        font-size: calc(
+            3.45rem
+            + ((10 - 3.45) * 16)
+            * (100vw - 320px)
+            / (848 - 320));
+        }
+    }
+
+@media (min-width: 480px) {
+    .banner {
+        margin-top: -0.3em;
+        margin-bottom: -1.5em;
+        }
+    }
+
+@media (min-width: 848px) {
+    .banner {
+        font-size: 10rem;
+        }
+    }
+
+/* Slogan */
+
+.banner__slogan {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 0.77;
+    font-weight: bold;
+    font-size: 1em;
+    }
+
+/* Abbr */
+
+.banner__abbr {
+    text-decoration: none;
+    }
+
+/* Date */
+
+.banner__date {
+    position: absolute;
+    top: 1.3em;
+    right: 0;
+    margin: 0;
+    color: #0A0B09;
+    line-height: 0.6;
+    font-weight: bold;
+    font-size: 0.42em;
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+    }
+.banner__date::before {
+    content: '\2014';
+    }

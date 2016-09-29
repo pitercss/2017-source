@@ -1,0 +1,36 @@
+/* Title */
+
+.title {
+    margin: 0;
+    background: url(../images/logo.svg) no-repeat;
+    }
+
+@media (max-width: 320px) {
+    .title {
+        height: 3.125rem;
+        }
+    }
+
+@media (min-width: 320px) {
+    .title {
+        height: calc(
+            3.125rem
+            + ((6.25 - 3.125) * 16)
+            * (100vw - 320px)
+            / (848 - 320));
+        }
+    }
+
+@media (min-width: 848px) {
+    .title {
+        height: 6.25rem;
+        }
+    }
+
+/* Text */
+
+.title__text {
+    position: absolute;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    }
