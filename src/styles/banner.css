@@ -4,7 +4,7 @@
     position: relative;
     margin: auto;
     margin-bottom: -0.3em;
-    padding: 0.92em 0 2.5em;
+    padding: 1em 0 2.3em;
     max-width: 848px;
     background: url(images/hand@1x.png) 100% 0 / auto 100% no-repeat;
     }
@@ -19,8 +19,8 @@
 
 @media (min-width: 480px) {
     .banner {
-        margin-top: -0.35em;
-        margin-bottom: -1.5em;
+        margin-top: -0.6em;
+        margin-bottom: -2em;
         }
     }
 
@@ -36,7 +36,7 @@
     .banner {
         font-size: calc(
             3.45rem
-            + ((10 - 3.45) * 16)
+            + ((8 - 3.45) * 16)
             * (100vw - 320px)
             / (848 - 320));
         }
@@ -44,7 +44,7 @@
 
 @media (min-width: 848px) {
     .banner {
-        font-size: 10rem;
+        font-size: 8rem;
         }
     }
 

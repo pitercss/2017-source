@@ -91,7 +91,6 @@
     width: 100%;
     border: none;
     background: none;
-    border-bottom: 0.125em solid #fff;
     color: #fff;
     font-family: inherit;
     font-size: 1em;
@@ -99,8 +98,12 @@
 .form__input:focus {
     outline: none;
     }
+.form__input,
 .form__input:invalid {
-    box-shadow: none;
+    box-shadow: 0 -0.125em 0 0 #fff inset;
+    }
+.form__input:focus {
+    box-shadow: 0 -0.25em 0 0 #fff inset;
     }
 
 /* Action */
@@ -131,12 +134,25 @@
 .form__button:focus {
     outline: none;
     }
+.form__button:active {
+    border-color: #d8faf3;
+    background: #d8faf3;
+    }
 
 @media (min-width: 480px) {
     .form__button {
         padding: 0.5em 0 0.4em;
-        width: 10em;
+        width: 8em;
         background: none;
         color: #fff;
+        }
+    .form__button:hover,
+    .form__button:focus,
+    .form__button:active {
+        color: #00e2b5;
+        }
+    .form__button:hover,
+    .form__button:focus {
+        background: #fff;
         }
     }
