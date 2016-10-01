@@ -3,31 +3,7 @@
 .form {
     position: relative;
     margin: auto;
-    padding-bottom: 3em;
     max-width: 848px;
-    }
-
-/* Slash */
-
-.form::after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1.1em;
-    width: 2.2em;
-    height: 2em;
-    background: url(images/slash.svg) 100% 0 no-repeat;
-    content: '';
-    }
-
-@media (min-width: 1064px) {
-    .form {
-        padding-bottom: 0;
-        }
-    .form::after {
-        left: 100%;
-        margin-left: 1.2em;
-        }
     }
 
 /* Lock */
