@@ -52,6 +52,7 @@
 
 .banner__slogan {
     margin: 0;
+    margin-left: -0.06em;
     padding: 0;
     list-style: none;
     line-height: 0.76;
