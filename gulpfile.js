@@ -66,7 +66,7 @@ gulp.task('deploy', () => {
 		.pipe(rsync({
 			root: 'dest',
 			hostname: 'pitercss.com',
-			destination: '/var/www/pitercss.com/html/secret/',
+			destination: '/var/www/pitercss.com/html/',
 			recursive: true,
 			clean: true,
 			incremental: true,
