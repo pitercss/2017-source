@@ -15,11 +15,17 @@
 .page__body {
     position: relative;
     margin: auto;
-    padding: 1em;
+    padding: 1.5em;
     max-width: 1280px;
     color: #fff;
     line-height: 1;
     font-family: Gotham Pro, sans-serif;
+    }
+
+@media (min-width: 848px) {
+    .page__body {
+        padding: 1em;
+        }
     }
 
 /* Lock */
