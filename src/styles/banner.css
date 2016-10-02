@@ -6,13 +6,7 @@
     margin-bottom: -0.3em;
     padding: 1em 0 2.3em;
     max-width: 848px;
-    background: url(images/hand@1x.png) 100% 0 / auto 100% no-repeat;
-    }
-
-@media (min-resolution: 2dppx) {
-    .banner {
-        background-image: url(images/hand@2x.png);
-        }
+    background: url(images/hand.jpg) 100% 0 / auto 100% no-repeat;
     }
 
 /* Hand */
