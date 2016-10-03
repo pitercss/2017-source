@@ -90,6 +90,7 @@
     padding: 0.3em 0;
     width: 100%;
     border: none;
+    border-radius: 0;
     background: none;
     color: #fff;
     font-family: inherit;
