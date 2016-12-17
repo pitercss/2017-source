@@ -11,13 +11,12 @@
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
-    "gulp-postcss": "^6.2.0",
     "gulp-posthtml": "^1.5.2",
     "gulp-replace": "^0.5.4",
     "gulp-rsync": "0.0.6",
-    "postcss-csso": "^1.1.2",
-    "postcss-import": "^8.2.0",
-    "posthtml-minifier": "^0.1.0"
+    "gulp-stylus": "^2.6.0",
+    "posthtml-minifier": "^0.1.0",
+    "stylobuild": "^1.0.0"
   },
   "editorconfig-cli": [
     "src/*.html",

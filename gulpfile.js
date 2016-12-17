@@ -1,15 +1,16 @@
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
+const stylus = require('gulp-stylus');
+const _stylus = require('./node_modules/gulp-stylus/node_modules/stylus');
+const stylobuild = require('stylobuild');
 const posthtml = require('gulp-posthtml');
-const replace = require('gulp-replace');
 const rsync = require('gulp-rsync');
 const sync = require('browser-sync').create();
 
 const assets = [
 	'src/**',
 	'!src/index.html',
-    '!src/styles{,/**}',
-	'!src/styles.css',
+	'!src/styles{,/**}',
+	'!src/**/*.styl',
 	'!src/**/*~'
 ];
 
@@ -26,16 +27,14 @@ gulp.task('html', () => {
 });
 
 gulp.task('styles', () => {
-	return gulp.src('src/styles.css')
-		.pipe(postcss([
-            require('postcss-import')(),
-			require('autoprefixer')(),
-			require('postcss-csso')()
-		]))
-        .pipe(replace(
-            /(url\()(..\/)/g,
-            '$1', { skipBinary: true }
-        ))
+	return gulp.src('src/styles.styl')
+		.pipe(stylus({
+			'include css': true,
+			use: stylobuild({}),
+			define: {
+				url: _stylus.resolver()
+			}
+		}))
 		.pipe(gulp.dest('dest'))
 		.pipe(sync.stream());
 });
@@ -57,8 +56,8 @@ gulp.task('server', () => {
 
 gulp.task('watch', () => {
 	gulp.watch('src/index.html', ['html']);
-	gulp.watch('src/styles/*.css', ['styles']);
-    gulp.watch(assets, ['copy']);
+	gulp.watch(['src/**/*.css', 'src/**/*.styl'], ['styles']);
+	gulp.watch(assets, ['copy']);
 });
 
 gulp.task('deploy', () => {
@@ -77,7 +76,7 @@ gulp.task('deploy', () => {
 gulp.task('build', [
 	'html',
 	'styles',
-    'copy'
+	'copy'
 ]);
 
 gulp.task('default', [
