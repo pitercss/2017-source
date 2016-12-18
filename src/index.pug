@@ -1,9 +1,19 @@
 include pug/_common.pug
 
 +Page._PreLanding
+  +b.H1.title
+    +e.text= "pitercss conference"
+
+  +b.banner
+    +e.UL.slogan
+      +e
   +Header({ isIndex: true, menu: data.menu })
+      +e= "summer"
+      +e= "css"
+    +e.P.date= "June 2017"
 
   +b.Content(role="main")
+    +e.H2.caption= "Be the first to know"
     +e.Banner
       h1
         abbr(title="Saint Petersburg") saint-p
@@ -11,3 +21,4 @@ include pug/_common.pug
       h2 June 16, 2017
 
   +Footer({ isIndex: true, menu: data.footerMenu })
+    +e.link(href="mailto:hi@pitercss.com")= "hi@pitercss.com"
