@@ -1,27 +1,29 @@
 const gulp = require('gulp');
+
 const stylus = require('gulp-stylus');
 const _stylus = require('./node_modules/gulp-stylus/node_modules/stylus');
 const stylobuild = require('stylobuild');
+
+const pug = require('gulp-pug');
 const posthtml = require('gulp-posthtml');
+
 const rsync = require('gulp-rsync');
 const sync = require('browser-sync').create();
 
 const assets = [
 	'src/**',
-	'!src/index.html',
 	'!src/styles{,/**}',
+	'!src/pug{,/**}',
+	'!src/**/*.pug',
 	'!src/**/*.styl',
 	'!src/**/*~'
 ];
 
 gulp.task('html', () => {
-	return gulp.src('src/index.html')
-		.pipe(posthtml([
-			require('posthtml-minifier')({
-				removeComments: true,
-				collapseWhitespace: true
-			})
-		]))
+	return gulp.src('src/*.pug')
+		.pipe(pug({
+
+		}))
 		.pipe(gulp.dest('dest'))
 		.pipe(sync.stream());
 });
@@ -55,7 +57,7 @@ gulp.task('server', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch('src/index.html', ['html']);
+	gulp.watch('src/**/*.pug', ['html']);
 	gulp.watch(['src/**/*.css', 'src/**/*.styl'], ['styles']);
 	gulp.watch(assets, ['copy']);
 });

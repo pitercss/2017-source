@@ -1,0 +1,42 @@
+include ../../node_modules/bemto.pug/bemto.pug
+
+-
+  set_bemto_settings({
+    element: '__',
+    modifier: '_'
+  })
+
+mixin Page(options)
+  - var options = options || {}
+
+  +b.HTML.page(lang="en")&attributes(attributes)
+    head
+      meta(charset="utf-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+
+      link(rel="manifest", href="pitercss.webmanifest")
+
+      link(rel="icon", href="favicon.ico")
+      link(rel="icon", type="image/png", href="images/icon-228x228.png", sizes="228x228")
+      link(rel="apple-touch-icon", type="image/png", href="images/icon-228x228.png")
+      link(rel="image_src", href="https://pitercss.com/images/og-vk.png")
+      meta(name="twitter:card", content="summary_large_image")
+      meta(name="twitter:site", content="@pitercss")
+      meta(name="twitter:url", property="og:url", content="https://pitercss.com")
+      meta(name="twitter:title", property="og:title", content="pitercss conference")
+      meta(name="twitter:description", property="og:description", content="saint-p summer css, june 2017")
+      meta(name="twitter:image", property="og:image", content="https://pitercss.com/images/og-fb.png")
+      meta(property="og:type", content="website")
+      meta(property="og:site_name", content="pitercss")
+
+      //- Using this, so IE8 could be handled as IE7
+      meta(http-equiv="X-UA-Compatible", content="IE=EmulateIE7,IE=edge")
+      link(rel="stylesheet", href="styles.css")
+
+      title= options.title || "pitercss conference"
+
+    +e.BODY.body
+      block
+
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-85020445-1','auto');ga('send','pageview');
