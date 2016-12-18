@@ -1,0 +1,56 @@
+.Header
+  position: relative
+
+  box-shadow: 0 1px $Colors.Divider
+
+  +at-small()
+    top: -1*$Sizes.HeaderHeight
+    margin-top: $Sizes.HeaderHeight
+
+  &-Content
+    display: flex
+
+    box-sizing: border-box
+    width: $Sizes.PageWidth
+    max-width: 100%
+    max-width: calc(100% - 5rem)
+    height: $Sizes.HeaderHeight
+    padding-top: 4px
+    margin: 0 auto
+
+    +at-small()
+      height: 12.8rem
+      max-width: calc(100% - 8rem)
+
+    & > *
+      display: inline-block
+
+  &-Logo
+    align-self: center
+
+    width: 175px
+    margin-right: 3rem
+
+    font-size: 2rem
+    line-height: 2.5rem
+
+    & .ui-Icon
+      margin-top: -8px
+
+      color: $Colors.Logo
+
+      +at-small()
+        width 212px
+        height 72px
+
+      &[href]:hover
+        color: $Colors.Link_hover
+
+    &-Name
+      font-family: $Fonts.Bold
+
+      &-Part
+        display: block
+
+    &-Date
+      font-size: 1.4rem

@@ -2,9 +2,15 @@ include ../../node_modules/bemto.pug/bemto.pug
 
 -
   set_bemto_settings({
+    flat_elements: false,
     element: '-',
     modifier: '_'
   })
+
+mixin svg-icon(name)
+  +b.SPAN.ui-Icon(class='_' + name)&attributes(attributes)
+    +e.SVG.Image
+      use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#" + name)
 
 mixin Page(options)
   - var options = options || {}
@@ -12,7 +18,7 @@ mixin Page(options)
   +b.HTML.Page(lang="en")&attributes(attributes)
     head
       meta(charset="utf-8")
-      meta(name="viewport", content="width=device-width, initial-scale=1")
+      meta(name="viewport", content="width=device-width")
 
       link(rel="manifest", href="pitercss.webmanifest")
 
@@ -36,7 +42,53 @@ mixin Page(options)
       title= options.title || "pitercss conference"
 
     +e.BODY.Body
+      include ../_icons/sprite.svg
+
       block
 
       script.
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-85020445-1','auto');ga('send','pageview');
+
+
+mixin Header(isIndex)
+  +b.HEADER.Header(role="banner")
+    +e.Content
+      +e.H1.Logo-
+        +svg-icon('Logo')(title="PiterCSS Conference, June 2017", href=(isIndex ? false : "index.html"))
+
+      +b.NAV.Nav(role="navigation")
+        +e.UL.Content
+          +e.Item: +e.A.Link.ui-Link-(href=(isIndex ? false : "index.html")): +e.Content= "About"
+          +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Speakers"
+          +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Photos"
+          +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Blog"
+          +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Other"
+
+        +e.Address-.ui-Link(href="#x")
+          +e.Part.-City
+            +svg-icon('Pin')
+            +b.ui-Link-Content= "Saint-Petersburg "
+          +e.Part: +b.ui-Link-Content= "nab. Obvodnogo canala, 60/319 "
+          +e.Part: +b.ui-Link-Content= "creative space «Tkachi»"
+
+        +e.Action.ui-Button(href="#x")= "Ok, get tickets"
+
+
+mixin Footer(isIndex)
+  +b.FOOTER.Footer
+    +e.Content
+      +e.P.Copyright-(role="contentinfo")
+        +e.Part= "© LLC «Interactive educational technologies», "
+        +e.Part= "2013-2016"
+
+      +b.UL.SocialLinks
+        +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_vk')
+        +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_facebook')
+        +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_instagram')
+
+      +e.UL.MustRead-
+        +e.Item: +e.Link.ui-Link-(href=(isIndex ? "code-of-conduct.html" : false)): +e.Content= "Code of Conduct"
+        +e.Item: +e.Link.ui-Link-(href="#x"): +e.Content= "Privacy Policy"
+
+      +e.Logo(href=(isIndex ? false : "index.html"))
+        +svg-icon('FooterLogo')

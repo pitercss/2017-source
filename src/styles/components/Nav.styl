@@ -1,0 +1,116 @@
+.Nav
+  display: flex
+  flex-grow: 1
+  align-items: center
+
+  & > *
+    display: inline-block
+
+  &-Address
+    position: relative
+
+    display: flex
+    flex-direction: column
+    align-self: stretch
+    justify-content: center
+
+    padding-left: 2rem
+    margin-left: 2.5rem
+
+    font-size: 1.4rem
+    line-height: 2rem
+
+    & .ui-Icon_Pin
+      position: absolute
+      right: 100%
+      top: 3px
+      margin-right: 8px
+
+    &:not(:hover) .ui-Icon_Pin
+      color: $Colors.Pin_inactive
+
+    +at-small()
+      display: none
+
+    && .ui-Link-Content
+      background-image: none
+
+    &&:hover .ui-Link-Content
+      background-image: linear-gradient(to right, $Colors.LinkUnderline_hover 50%, transparent 0)
+      background-repeat: repeat-x
+      background-size: 6px 1px
+      background-position: 0 calc(50% + 0.6em)
+
+    &-Part
+      position: relative
+      display: block
+
+    &-City
+      font-family: $Fonts.Bold
+
+  &-Action
+    margin-top: -4px
+    margin-left: 2.5rem
+
+    text-transform: lowercase
+
+    +at-small()
+      margin-left: auto
+      height: 8rem
+      line-height: 8rem
+      padding: 0 5.5rem
+
+  &-Content
+    display: flex
+    align-self: stretch
+    flex-wrap: wrap
+
+    margin-right: auto
+
+    font-family: $Fonts.Bold
+    font-size: 1.5rem
+    text-transform: uppercase
+
+    +at-small()
+      position: absolute
+      top: 12.8rem
+      left: 2.5rem
+      right: 2.5rem
+      height: $Sizes.HeaderHeight
+
+      font-size: 2.3rem
+
+  &-Item
+    display: inline-block
+    display: flex
+
+  &-Link
+    position: relative
+    display: inline-block
+    display: flex
+    align-items: center
+
+    padding: 0 1.5rem
+
+    +at-small()
+      &:not([href]) .ui-Link-Content
+        padding: 0.5rem 1rem 0
+
+        background: $Colors.ActiveItem_small
+        color: $Colors.ActiveItemText_small
+
+
+    +at-large()
+      &:not([href]):before
+        content: ""
+        position: absolute
+        bottom: -1px
+        left: @padding[1]
+        right: @padding[1]
+
+        height: 4px
+
+        background: $Colors.ActiveItem
+
+    &:not(:hover) > .ui-Link-Content
+      background-image: none

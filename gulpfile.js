@@ -1,17 +1,20 @@
 const gulp = require('gulp');
+const runSequence = require('run-sequence');
+
+const svgSprite = require("gulp-svg-sprite");
 
 const stylus = require('gulp-stylus');
 const _stylus = require('./node_modules/gulp-stylus/node_modules/stylus');
 const stylobuild = require('stylobuild');
 
 const pug = require('gulp-pug');
-const posthtml = require('gulp-posthtml');
 
 const rsync = require('gulp-rsync');
 const sync = require('browser-sync').create();
 
 const assets = [
 	'src/**',
+	'!src/svg{,/**}',
 	'!src/styles{,/**}',
 	'!src/pug{,/**}',
 	'!src/**/*.pug',
@@ -41,6 +44,26 @@ gulp.task('styles', () => {
 		.pipe(sync.stream());
 });
 
+gulp.task('svg-icons', function () {
+    return gulp.src('src/svg/*.svg')
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    inline: true,
+                    prefix: '.ui-Icon_%s',
+                    dest: '',
+                    dimensions: '%s',
+                    sprite: 'sprite.svg',
+                    render: {
+                        styl: true
+                    },
+                    example: true
+                },
+            }
+        }))
+        .pipe(gulp.dest("src/_icons"))
+});
+
 gulp.task('copy', () => {
 	return gulp.src(assets)
 		.pipe(gulp.dest('dest'))
@@ -59,6 +82,7 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
 	gulp.watch('src/**/*.pug', ['html']);
 	gulp.watch(['src/**/*.css', 'src/**/*.styl'], ['styles']);
+	gulp.watch('src/svg/*.svg', ['build-assets-with-icons']);
 	gulp.watch(assets, ['copy']);
 });
 
@@ -76,10 +100,19 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('build', [
-	'html',
-	'styles',
+	'build-assets-with-icons',
 	'copy'
 ]);
+
+gulp.task('build-assets', [
+	'html',
+	'styles'
+]);
+
+gulp.task('build-assets-with-icons', (done) => {
+    runSequence('svg-icons', 'build-assets', done);
+});
+
 
 gulp.task('default', [
 	'build',

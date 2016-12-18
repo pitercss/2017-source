@@ -1,0 +1,37 @@
+.ui-Button
+  position: relative
+
+  display: inline-block
+  vertical-align: baseline
+
+  box-sizing: border-box
+  max-width: 100%
+  height: $Sizes.ButtonHeight
+  padding: 0 $Sizes.ButtonPaddings
+  border: none
+  margin: 0
+
+  white-space: nowrap
+  text-decoration: none
+
+  font: inherit
+  line-height: $Sizes.ButtonHeight
+
+  color: $Colors.ButtonText
+  background: $Colors.Button
+
+  border-radius: $Sizes.ButtonRadius
+
+  -moz-appearance: none
+  cursor: pointer
+  user-select: none
+
+  &::-moz-focus-inner
+    padding: 0
+    border: none
+
+  &:hover
+    background: $Colors.Button_hover
+
+  &:active
+    background: $Colors.Button_active

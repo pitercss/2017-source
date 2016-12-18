@@ -6,23 +6,66 @@ $_BrandColors = {
   Gray: #B4BDC7
   DarkGray: #77808A
   Green: #00E2B5
-  Purple: #FF0195 // FF42B0 on hover, #ED058C on active
+  Purple: #FF0195
   Yellow: #F9C752
 }
 
 $Colors = {
   Page: $_BrandColors.White
   PageText: $_BrandColors.Black
+  PageHeader: $_BrandColors.Green
+
+  ActiveItem: $_BrandColors.Purple
+  ActiveItem_small: $_BrandColors.Green
+  ActiveItemText_small: $_BrandColors.White
+
+  Button: $_BrandColors.Purple
+  Button_hover: #FF42B0
+  Button_active: #ED058C
+  ButtonText: $_BrandColors.White
+
+  Logo: $_BrandColors.Green
+  Logo_hover: $_BrandColors.Purple
+
   Link: $_BrandColors.Black
   Link_hover: $_BrandColors.Purple
   LinkUnderline: rgba($_BrandColors.DarkBlack, 0.2)
   LinkUnderline_hover: rgba($_BrandColors.Purple, 0.2)
+
   Selection: $_BrandColors.Green
   SelectionText: $_BrandColors.White
+
   Divider: rgba($_BrandColors.Black, 0.2)
+
+  SocialLink: $_BrandColors.Gray
+
+  Pin_inactive: $_BrandColors.Gray
+
+  Marker: $_BrandColors.Green
+
+  TableHeader: $_BrandColors.Green
+
+  Block: $_BrandColors.LightGray
+  BlockText: $_BrandColors.Black
+  DarkBlock: $_BrandColors.DarkGray
+  DarkBlockText: $_BrandColors.White
+
+  Quote: $_BrandColors.Green
 }
 
 $Sizes = {
   BodyText: 2rem
   LineHeight: 1.6em
+  PageWidth: 1280px
+  HeaderHeight: 11.5rem
+  ContentWidth: 84rem
+  FooterHeight: 9.6rem
+  ButtonHeight: 50px
+  ButtonPaddings: 25px
+  ButtonRadius: 4px
 }
+
+$Fonts = {}
+
+$Fonts['Normal'] = Gotham Pro, Helvetica Neue, sans-serif
+$Fonts['Bold'] = Gotham Pro Bold, Helvetica Neue, sans-serif

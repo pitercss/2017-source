@@ -1,0 +1,104 @@
+.Footer
+  font-size: 1.4rem
+  line-height: 2.4rem
+
+  box-shadow: 0 -1px $Colors.Divider
+
+  +at-small()
+    font-size: 2.3rem
+    line-height: 3.3rem
+
+  &-Content
+    display: flex
+    align-items: center
+
+    width: $Sizes.PageWidth
+    max-width: 100%
+    max-width: calc(100% - 5rem)
+    height: $Sizes.FooterHeight
+    margin: 0 auto
+
+    +at-small()
+      max-width: calc(100% - 8rem)
+      flex-wrap: wrap
+
+    & > *
+      display: inline-block
+
+  &-Copyright
+    margin-right: auto
+
+    +at-small()
+      order: 1
+
+      box-sizing: border-box
+      max-width: 100%
+      padding-right: 100px
+      margin-bottom: 6rem
+
+    &-Part
+      display: block
+
+  &-Logo
+    color: $Colors.Logo
+    margin-left: 55px
+
+    &[href]:hover
+      color: $Colors.Logo_hover
+
+    +at-small()
+      order: 1
+      margin-bottom: 6rem
+
+      margin-left: -100px
+
+      & .ui-Icon_FooterLogo
+        width: 76px
+        height: 70px
+
+  &-MustRead
+    display: flex
+    align-self: stretch
+
+    margin-left: auto
+
+    +at-small()
+      height: 15rem
+      order: -1
+
+      margin-right: auto
+      margin-left: -1.5rem
+
+    &-Item
+      display: inline-block
+      display: flex
+
+    &-Link
+      position: relative
+      display: inline-block
+      display: flex
+      align-items: center
+
+      white-space: nowrap
+
+      padding: 0 1.5rem
+
+      +at-small()
+        &:not([href]) .ui-Link-Content
+          padding: 0.5rem 1rem 0
+
+          background: $Colors.ActiveItem_small
+          color: $Colors.ActiveItemText_small
+
+
+      +at-large()
+        &:not([href]):before
+          content: ""
+          position: absolute
+          top: -1px
+          left: @padding[1]
+          right: @padding[1]
+
+          height: 4px
+
+          background: $Colors.ActiveItem
