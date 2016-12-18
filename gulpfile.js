@@ -15,6 +15,7 @@ const sync = require('browser-sync').create();
 const assets = [
 	'src/**',
 	'!src/svg{,/**}',
+	'!src/_icons{,/**}',
 	'!src/styles{,/**}',
 	'!src/pug{,/**}',
 	'!src/**/*.pug',
