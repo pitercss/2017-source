@@ -4,7 +4,7 @@ const runSequence = require('run-sequence');
 const svgSprite = require("gulp-svg-sprite");
 
 const stylus = require('gulp-stylus');
-const _stylus = require('./node_modules/gulp-stylus/node_modules/stylus');
+const _stylus = require('stylus');
 const stylobuild = require('stylobuild');
 
 const pug = require('gulp-pug');
