@@ -1,24 +1,3 @@
 include pug/_common.pug
 
 +Page
-  +b.H1.title
-    +e.text= "pitercss conference"
-
-  +b.banner
-    +e.UL.slogan
-      +e
-        +e.abbr(title="Saint Petersburg")= "saint-p"
-      +e= "summer"
-      +e= "css"
-    +e.P.date= "June 2017"
-
-  +b.FORM.form(action="https://pitercss.us14.list-manage.com/subscribe/post?u=5e93eb3640317ef9257048d9c&amp;id=e052fffa90", method="post")
-    +e.H2.caption= "Be the first to know"
-    +e.group
-      +e.email
-        +e.INPUT.input#email(type="text", name="EMAIL", required="required", autocorrect="off", autocapitalize="off")
-        +e.label(for="email")= "Your e-mail"
-      +e.button(type="submit", name="subscribe")= "Notify me"
-
-  +b.FOOTER.footer
-    +e.link(href="mailto:hi@pitercss.com")= "hi@pitercss.com"

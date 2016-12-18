@@ -2,14 +2,14 @@ include ../../node_modules/bemto.pug/bemto.pug
 
 -
   set_bemto_settings({
-    element: '__',
+    element: '-',
     modifier: '_'
   })
 
 mixin Page(options)
   - var options = options || {}
 
-  +b.HTML.page(lang="en")&attributes(attributes)
+  +b.HTML.Page(lang="en")&attributes(attributes)
     head
       meta(charset="utf-8")
       meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -35,7 +35,7 @@ mixin Page(options)
 
       title= options.title || "pitercss conference"
 
-    +e.BODY.body
+    +e.BODY.Body
       block
 
       script.
