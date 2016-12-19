@@ -13,9 +13,11 @@
         background-size: 16px 1px
         background-position: 0 calc(50% + 0.75em)
 
-      ^[0][href]:hover &
+      ^[0][href]:hover &,
+      ^[0][href]:focus &
         background-image: linear-gradient($Colors.LinkUnderline_hover, $Colors.LinkUnderline_hover)
 
 
-  &[href]:hover
+  &[href]:hover,
+  &[href]:focus
     color: $Colors.Link_hover

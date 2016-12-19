@@ -26,7 +26,7 @@
       top: 3px
       margin-right: 8px
 
-    &:not(:hover) .ui-Icon_Pin
+    &:not(:hover):not(:focus) .ui-Icon_Pin
       color: $Colors.Pin_inactive
 
     +at-small()
@@ -35,7 +35,8 @@
     && .ui-Link-Content
       background-image: none
 
-    &&:hover .ui-Link-Content
+    &&:hover .ui-Link-Content,
+    &&:focus .ui-Link-Content
       background-image: linear-gradient(to right, $Colors.LinkUnderline_hover 50%, transparent 0)
       background-repeat: repeat-x
       background-size: 6px 1px
@@ -112,5 +113,5 @@
 
         background: $Colors.ActiveItem
 
-    &:not(:hover) > .ui-Link-Content
+    &:not(:hover):not(:focus) > .ui-Link-Content
       background-image: none
