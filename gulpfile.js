@@ -51,7 +51,7 @@ gulp.task('svg-icons', function () {
             mode: {
                 symbol: {
                     inline: true,
-                    prefix: '.ui-Icon_%s',
+                    prefix: '.ui-Icon_%s .ui-Icon-Image',
                     dest: '',
                     dimensions: '%s',
                     sprite: 'sprite.svg',

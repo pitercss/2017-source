@@ -8,9 +8,14 @@ include ../../node_modules/bemto.pug/bemto.pug
   })
 
 mixin svg-icon(name)
+  - var attributes = attributes || {}
+  - var width = attributes.width || 16
+  - var height = attributes.height || 16
   +b.SPAN.ui-Icon(class='_' + name)&attributes(attributes)
-    +e.SVG.Image
+    +e.SVG.Image(width=width, height=height)
       use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#" + name)
+      +e.RECT.Helper
+    block
 
 mixin Page(options)
   - var options = options || {}
@@ -54,7 +59,8 @@ mixin Header(isIndex)
   +b.HEADER.Header(role="banner")
     +e.Content
       +e.H1.Logo-
-        +svg-icon('Logo')(title="PiterCSS Conference, June 2017", href=(isIndex ? false : "index.html"))
+        +svg-icon('Logo')(width="175", height="38", title="PiterCSS Conference, June 2017", href=(isIndex ? false : "index.html"))
+          +b.Header-Logo-Date= "June 2017"
 
       +b.NAV.Nav(role="navigation")
         +e.UL.Content
