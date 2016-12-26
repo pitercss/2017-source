@@ -141,7 +141,7 @@
 
     &:before
       content: counter(list-item) "."
-      width: 2.5rem
+      width: 1.25em
 
   & li ul > li,
   & li ol > li
@@ -212,6 +212,7 @@
       content: "«"
 
       position: absolute
+      top: -0.04em
       left: 0
 
       box-sizing: border-box
@@ -223,12 +224,15 @@
 
       color: $Colors.Quote
 
-    & > :nth-last-child(2):after
+    & > p:last-of-type:after
       content: "»"
-      position: absolute
 
-      font-size: 2em
+      position: relative
+      top: -1px
+
       margin-left: 0.4em
+      font-size: 2em
+      vertical-align: -0.15em
 
       color: $Colors.Quote
 
