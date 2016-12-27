@@ -64,13 +64,13 @@
 
 .banner__date {
     position: absolute;
-    top: 1.81em;
+    top: 1.5em;
     right: 0;
     margin: 0;
     color: #0A0B09;
     line-height: 0.6;
     font-weight: bold;
-    font-size: 0.41em;
+    font-size: 0.37em;
     transform-origin: 100% 100%;
     transform: rotate(-90deg);
     }
