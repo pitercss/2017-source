@@ -1,0 +1,30 @@
+.ui-Input
+  position: relative
+
+  display: inline-block
+  vertical-align: baseline
+
+  box-sizing: border-box
+  width: 220px
+  max-width: 100%
+  height: $Sizes.ButtonHeight
+  border: none
+  margin: 0
+
+  font: inherit
+  line-height: $Sizes.ButtonHeight
+  background: transparent
+
+  -moz-appearance: none
+  cursor: text
+  user-select: none
+
+  color: inherit
+  box-shadow: inset 0 -2px 0 $Colors.Misc
+
+  &:hover
+    box-shadow: inset 0 -2px 0 $Colors.Button
+
+  &:focus
+    outline: none
+    box-shadow: inset 0 -2px 0 $Colors.Button_active

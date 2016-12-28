@@ -16,63 +16,77 @@
     max-width: 100%
     max-width: calc(100% - 5rem)
     height: $Sizes.FooterHeight
+    padding-bottom: $Sizes.FooterPadding
     margin: 0 auto
 
     +at-small()
       max-width: calc(100% - 8rem)
-      flex-wrap: wrap
 
     & > *
       display: inline-block
 
+  &-Subscribe
+    align-self: flex-end
+    flex-shrink: 1
+    flex-grow: 1
+    flex-basis: 50%
+
+    margin-bottom: 1rem
+
+    &-Header
+      display: block
+
+      font-size: 2rem
+      line-height: 3rem
+      margin-bottom: 6px
+
+    &-Button
+      margin-left: 1.6rem
+
   &-Copyright
-    margin-right: auto
+    padding-left: 1.5rem
+    height: 2.4rem
 
-    +at-small()
-      order: 1
-
-      box-sizing: border-box
-      max-width: 100%
-      padding-right: 100px
-      margin-bottom: 6rem
+    color: $Colors.Misc
 
     &-Part
       display: block
 
   &-Logo
     color: $Colors.Logo
-    margin-left: 55px
+    margin-top: auto
+    margin-left: 50px
+    margin-bottom: 8px
 
     &[href]:hover,
     &[href]:focus
       color: $Colors.Logo_hover
 
     +at-small()
-      order: 1
-      margin-bottom: 6rem
-
-      margin-left: -100px
-
       & .ui-Icon_FooterLogo
         width: 76px
         height: 70px
+
+  &-Info
+    display: flex
+    align-self: stretch
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: flex-end
+    flex-shrink: 1
+    flex-grow: 1
+    flex-basis: calc(50% - 10rem)
 
   &-MustRead
     display: flex
     align-self: stretch
 
-    margin-left: auto
-
-    +at-small()
-      height: 15rem
-      order: -1
-
-      margin-right: auto
-      margin-left: -1.5rem
-
     &-Item
       display: inline-block
       display: flex
+
+      height: $Sizes.FooterHeight - 2.4rem
 
     &-Link
       position: relative
@@ -83,6 +97,7 @@
       white-space: nowrap
 
       padding: 0 1.5rem
+      margin-bottom: -1rem
 
       &:not([href]) > .ui-Link-Content
         padding: 5px 13px 3px

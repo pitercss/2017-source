@@ -77,7 +77,7 @@ mixin Header(isIndex)
           +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Blog"
           +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Other"
 
-        +e.Action.ui-Button(href="#x")
+        +e.Action.ui-Button_Action(href="#x")
           +svg-icon('Ticket')
           = "2500₽ / €40 / $38"
 
@@ -85,18 +85,26 @@ mixin Header(isIndex)
 mixin Footer(isIndex)
   +b.FOOTER.Footer
     +e.Content
-      +e.P.Copyright-(role="contentinfo")
-        +e.Part= "© Interactive Educational Technologies LLC, "
-        +e.Part= "2016—2017"
+      +e.FORM.Subscribe-(action="")
+        +e.LABEL.Header(for="Subscribe")= "Subscribe for last news"
+        +e.P.Field
+          +e.INPUT.Input.ui-Input#Subscribe(placeholder="E-mail")
+          +e.BUTTON.Button.ui-Button= "Notify me"
 
       +b.UL.SocialLinks
+        +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_twitter')
         +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_vk')
         +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_facebook')
         +e.Item: +e.Link.ui-Link(href="#x"): +svg-icon('SocialIcon_instagram')
+        +e.Item_mail: +e.Link.ui-Link(href="mailto:hi@pitercss.com")= "hi@pitercss.com"
 
-      +e.UL.MustRead-
-        +e.Item: +e.Link.ui-Link-(href=(isIndex ? "code-of-conduct.html" : false)): +e.Content= "Code of Conduct"
-        +e.Item: +e.Link.ui-Link-(href="#x"): +e.Content= "Privacy Policy"
+      +e.Info
+        +e.Info-Content
+          +e.UL.MustRead-
+            +e.Item: +e.Link.ui-Link-(href=(isIndex ? "code-of-conduct.html" : false)): +e.Content= "Code of Conduct"
+            +e.Item: +e.Link.ui-Link-(href="#x"): +e.Content= "Privacy Policy"
+
+          +e.P.Copyright-(role="contentinfo")= "© Interactive Educational Technologies LLC, 2016—2017"
 
       +e.Logo(href=(isIndex ? false : "index.html"))
         +svg-icon('FooterLogo')

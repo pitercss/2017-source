@@ -1,15 +1,23 @@
 .SocialLinks
+  position: relative
+
   display: flex
   align-self: stretch
 
   +at-small()
-    margin-right: -1.5rem
+    margin-right: -1rem
 
   &-Item
     display: inline-block
     display: flex
 
     overflow: hidden
+
+    &_mail
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
 
   &-Link
     position: relative
@@ -19,6 +27,11 @@
     justify-content: center
 
     width: 32px
-    padding: 0 1.5rem
+    padding: 0 1rem
 
     color: $Colors.SocialLink
+
+    ^[0]-Item_mail > &
+      flex-grow: 1
+      width: auto
+      text-align: center
