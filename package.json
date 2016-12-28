@@ -3,7 +3,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "(cd dest && touch z && git add . && git rm -rf .) && gulp build && (cd dest && git add . && git commit -m 'Build up' && git push origin gh-pages)",
+    "deploy": "(cd dest && touch z && git add . && git rm -rf .) && gulp build && (cd dest && git add . && git commit -m 'Build up' && git push -f origin gh-pages)",
     "init-deploy": "rm -rf dest && git clone -b gh-pages git@github.com:pitercss/pitercss.com.git dest",
     "test": "editorconfig-cli && gulp build && ls dest"
   },
