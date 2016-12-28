@@ -18,7 +18,7 @@ const assets = [
 	'!src/_icons{,/**}',
 	'!src/styles{,/**}',
 	'!src/pug{,/**}',
-    '!src/**/*.pug',
+	'!src/**/*.pug',
 	'!src/**/*.md',
 	'!src/**/*.styl',
 	'!src/**/*~'
@@ -47,23 +47,23 @@ gulp.task('styles', () => {
 });
 
 gulp.task('svg-icons', function () {
-    return gulp.src('src/svg/*.svg')
-        .pipe(svgSprite({
-            mode: {
-                symbol: {
-                    inline: true,
-                    prefix: '.ui-Icon_%s .ui-Icon-Image',
-                    dest: '',
-                    dimensions: '%s',
-                    sprite: 'sprite.svg',
-                    render: {
-                        styl: true
-                    },
-                    example: true
-                },
-            }
-        }))
-        .pipe(gulp.dest("src/_icons"))
+	return gulp.src('src/svg/*.svg')
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					inline: true,
+					prefix: '.ui-Icon_%s .ui-Icon-Image',
+					dest: '',
+					dimensions: '%s',
+					sprite: 'sprite.svg',
+					render: {
+						styl: true
+					},
+					example: true
+				},
+			}
+		}))
+		.pipe(gulp.dest("src/_icons"))
 });
 
 gulp.task('copy', () => {
@@ -112,7 +112,7 @@ gulp.task('build-assets', [
 ]);
 
 gulp.task('build-assets-with-icons', (done) => {
-    runSequence('svg-icons', 'build-assets', done);
+	runSequence('svg-icons', 'build-assets', done);
 });
 
 
