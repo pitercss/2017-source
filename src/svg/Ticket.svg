@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="18px" viewBox="0 0 30 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ticket/white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="30 9 30 18 0 18 0 9 0 0 30 0"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="btn/red/buying/icon/static" transform="translate(-24.000000, -15.000000)">
+            <g id="icon/ticket/white" transform="translate(24.000000, 15.000000)">
+                <g id="Page-1">
+                    <polygon id="Fill-1" fill="currentColor" points="7.96801758 12.9402176 21.9361081 13 21.9680176 5.05978244 7.9999271 5"></polygon>
+                    <g id="Group-4">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-3"></g>
+                        <path d="M28,13.582 L28,16 L2,16 L2,13.582 C3.764,12.809 5,11.046 5,9 C5,6.953 3.764,5.19 2,4.417 L2,2 L28,2 L28,4.417 C26.236,5.19 25,6.953 25,9 C25,11.046 26.236,12.809 28,13.582 M30,6 L30,0 L0,0 L0,6 C1.657,6 3,7.343 3,9 C3,10.656 1.657,12 0,12 L0,18 L30,18 L30,12 C28.343,12 27,10.656 27,9 C27,7.343 28.343,6 30,6" id="Fill-2" fill="currentColor" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

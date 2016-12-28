@@ -20,8 +20,6 @@
   color: $Colors.ButtonText
   background: $Colors.Button
 
-  border-radius: $Sizes.ButtonRadius
-
   -moz-appearance: none
   cursor: pointer
   user-select: none
@@ -36,3 +34,9 @@
 
   &:active
     background: $Colors.Button_active
+
+  & > .ui-Icon:first-child
+    margin-right: 1.2rem
+    margin-top: -3px
+
+    vertical-align: middle

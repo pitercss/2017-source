@@ -10,12 +10,13 @@
     position: relative
 
     display: flex
+    flex-shrink: 0
     flex-direction: column
     align-self: stretch
     justify-content: center
 
     padding-left: 2rem
-    margin-left: 2.5rem
+    margin-right: 3rem
 
     font-size: 1.4rem
     line-height: 2rem
@@ -51,7 +52,7 @@
 
   &-Action
     margin-top: -4px
-    margin-left: 2.5rem
+    margin-left: 1.5rem
 
     text-transform: lowercase
 
@@ -66,7 +67,7 @@
     align-self: stretch
     flex-wrap: wrap
 
-    margin-right: auto
+    margin-left: auto
 
     font-family: $Fonts.Bold
     font-size: 1.5rem
@@ -93,25 +94,23 @@
 
     padding: 0 1.5rem
 
-    +at-small()
-      &:not([href]) .ui-Link-Content
-        padding: 0.5rem 1rem 0
+    &:not([href]) > .ui-Link-Content
+      padding: 5px 13px 3px
+      margin: -5px -13px -3px
 
-        background: $Colors.ActiveItem_small
-        color: $Colors.ActiveItemText_small
+      line-height: 2.2rem
 
+      color: $Colors.ActiveItemText
+      background: $Colors.ActiveItem
 
-    +at-large()
-      &:not([href]):before
-        content: ""
-        position: absolute
-        bottom: -1px
-        left: @padding[1]
-        right: @padding[1]
+      border-radius: 99px
 
-        height: 4px
+      +at-small()
+        padding: 14px 13px 10px
+        margin: -14px -13px -10px
 
-        background: $Colors.ActiveItem
+        &:first-child
+          margin-left: 0
 
     &:not(:hover):not(:focus) > .ui-Link-Content
       background-image: none

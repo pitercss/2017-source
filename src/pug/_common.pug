@@ -60,9 +60,16 @@ mixin Header(isIndex)
     +e.Content
       +e.H1.Logo-
         +svg-icon('Logo')(width="175", height="38", title="PiterCSS Conference, June 2017", href=(isIndex ? false : "index.html"))
-          +b.Header-Logo-Date= "June 2017"
+          +b.Header-Logo-Date= "16 June 2017"
 
       +b.NAV.Nav(role="navigation")
+        +e.Address-.ui-Link(href="https://yandex.com/maps/-/CZTFMDny")
+          +e.Part.-City
+            +svg-icon('Pin')
+            +b.ui-Link-Content= "Saint Petersburg "
+          +e.Part: +b.ui-Link-Content= "Benoit Farm, "
+          +e.Part: +b.ui-Link-Content= "Tikhoretsky, 17"
+
         +e.UL.Content
           +e.Item: +e.A.Link.ui-Link-(href=(isIndex ? false : "index.html")): +e.Content= "About"
           +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Speakers"
@@ -70,14 +77,9 @@ mixin Header(isIndex)
           +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Blog"
           +e.Item: +e.A.Link.ui-Link-(href="#x"): +e.Content= "Other"
 
-        +e.Address-.ui-Link(href="#x")
-          +e.Part.-City
-            +svg-icon('Pin')
-            +b.ui-Link-Content= "Saint-Petersburg "
-          +e.Part: +b.ui-Link-Content= "nab. Obvodnogo canala, 60/319 "
-          +e.Part: +b.ui-Link-Content= "creative space «Tkachi»"
-
-        +e.Action.ui-Button(href="#x")= "Ok, get tickets"
+        +e.Action.ui-Button(href="#x")
+          +svg-icon('Ticket')
+          = "2500₽ / €40 / $38"
 
 
 mixin Footer(isIndex)

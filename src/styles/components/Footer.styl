@@ -84,22 +84,13 @@
 
       padding: 0 1.5rem
 
-      +at-small()
-        &:not([href]) .ui-Link-Content
-          padding: 0.5rem 1rem 0
+      &:not([href]) > .ui-Link-Content
+        padding: 5px 13px 3px
+        margin: -5px -13px -3px
 
-          background: $Colors.ActiveItem_small
-          color: $Colors.ActiveItemText_small
+        line-height: 2.2rem
 
+        color: $Colors.ActiveItemText
+        background: $Colors.ActiveItem
 
-      +at-large()
-        &:not([href]):before
-          content: ""
-          position: absolute
-          top: -1px
-          left: @padding[1]
-          right: @padding[1]
-
-          height: 4px
-
-          background: $Colors.ActiveItem
+        border-radius: 99px
