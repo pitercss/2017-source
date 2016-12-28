@@ -88,7 +88,7 @@ mixin Footer(isIndex)
       +e.FORM.Subscribe-(action="")
         +e.LABEL.Header(for="Subscribe")= "Subscribe for last news"
         +e.P.Field
-          +e.INPUT.Input.ui-Input#Subscribe(placeholder="E-mail")
+          +e.INPUT.Input.ui-Input#Subscribe(type="email", placeholder="E-mail")
           +e.BUTTON.Button.ui-Button= "Notify me"
 
       +b.UL.SocialLinks

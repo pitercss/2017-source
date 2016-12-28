@@ -12,7 +12,7 @@
   margin: 0
 
   font: inherit
-  line-height: $Sizes.ButtonHeight
+  line-height: @height
   background: transparent
 
   -moz-appearance: none
@@ -21,6 +21,12 @@
 
   color: inherit
   box-shadow: inset 0 -2px 0 $Colors.Misc
+
+  +at-small()
+    height: $Sizes.ButtonHeight_narrow
+    padding-top: 0.4rem
+
+    line-height: @height + 0.6rem
 
   &:hover
     box-shadow: inset 0 -2px 0 $Colors.Button
