@@ -3,6 +3,9 @@
   flex-grow: 1
   align-items: center
 
+  +at-small()
+    flex-wrap: wrap
+
   & > *
     display: inline-block
 
@@ -57,10 +60,14 @@
     text-transform: lowercase
 
     +at-small()
+      height: 6.4rem
+      line-height: @height + 0.4rem
+      margin: (($Sizes.HeaderHeight_narrow - @height) / 2) 0
       margin-left: auto
-      height: 8rem
-      line-height: 8rem
-      padding: 0 5.5rem
+      padding: 0 2.5rem
+
+      & .ui-Icon
+        display: none
 
   &-Content
     display: flex
@@ -74,11 +81,10 @@
     text-transform: uppercase
 
     +at-small()
-      position: absolute
-      top: 15.6rem
-      left: 2.5rem
-      right: 2.5rem
-      height: $Sizes.HeaderHeight
+      flex-wrap: nowrap
+      order: 1
+
+      margin: 0
 
       font-size: 2.3rem
 
@@ -93,6 +99,13 @@
     align-items: center
 
     padding: 0 1.5rem
+
+    +at-small()
+      padding-top: 26px
+      padding-bottom: 26px
+
+      :first-child > &
+        padding-left: 0
 
     &:not([href]) > .ui-Link-Content
       padding: 5px 13px 3px
