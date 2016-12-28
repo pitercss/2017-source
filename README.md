@@ -2,5 +2,6 @@
 
 - Start: `npm start` or `gulp`
 - Build: `npm run build` or `gulp build`
-- Deploy: `npm run deploy` or `gulp deploy`
+- Init Deploy to gh-pages: `npm run init-deploy`
+- Deploy: `npm run deploy`
 - Test: `npm test`
