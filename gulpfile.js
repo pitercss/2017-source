@@ -18,7 +18,8 @@ const assets = [
 	'!src/_icons{,/**}',
 	'!src/styles{,/**}',
 	'!src/pug{,/**}',
-	'!src/**/*.pug',
+    '!src/**/*.pug',
+	'!src/**/*.md',
 	'!src/**/*.styl',
 	'!src/**/*~'
 ];
@@ -81,7 +82,7 @@ gulp.task('server', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch('src/**/*.pug', ['html']);
+	gulp.watch(['src/**/*.pug', 'src/**/*.md'], ['html']);
 	gulp.watch(['src/**/*.css', 'src/**/*.styl'], ['styles']);
 	gulp.watch('src/svg/*.svg', ['build-assets-with-icons']);
 	gulp.watch(assets, ['copy']);

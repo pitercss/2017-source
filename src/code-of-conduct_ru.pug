@@ -1,0 +1,9 @@
+include pug/_common.pug
+
++Page({ title: "Нормы поведения" })._CoC
+  +Header
+
+  +b.Content(role="main")
+    include:markdown-it(html=true, typographer=true) code-of-conduct.ru.md
+
+  +Footer

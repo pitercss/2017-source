@@ -1,23 +1,31 @@
 .ui-Link
-  text-decoration: none
+  &,
+  /.Content a:not([class])
+    text-decoration: none
 
-  color: $Colors.Link
+    color: $Colors.Link
 
   &-Content
-    padding: 0.35em 0
+    &,
+    /.Content a:not([class])
+      padding: 0.35em 0
+
+      background-repeat: repeat-x
+      background-size: 16px 1px
+      background-position: 0 calc(50% + 0.75em)
 
     @supports (background-position: 0 calc(50% + 0.75em))
       ^[0][href] &
         background-image: linear-gradient($Colors.LinkUnderline, $Colors.LinkUnderline)
-        background-repeat: repeat-x
-        background-size: 16px 1px
-        background-position: 0 calc(50% + 0.75em)
 
       ^[0][href]:hover &,
-      ^[0][href]:focus &
+      ^[0][href]:focus &,
+      /.Content a:not([class])[href]:hover,
+      /.Content a:not([class])[href]:focus
         background-image: linear-gradient($Colors.LinkUnderline_hover, $Colors.LinkUnderline_hover)
 
 
   &[href]:hover,
-  &[href]:focus
+  &[href]:focus,
+  /.Content a:not([class])[href]
     color: $Colors.Link_hover
