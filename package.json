@@ -3,7 +3,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gulp deploy",
+    "deploy": "(cd dest && git rm -rf .) && gulp build && (cd dest && git add . && git commit -m 'Build up' && git push origin gh-pages)",
     "test": "editorconfig-cli && gulp build && ls dest"
   },
   "devDependencies": {
