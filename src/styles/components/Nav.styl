@@ -28,7 +28,7 @@
       position: absolute
       right: 100%
       top: 3px
-      margin-right: 8px
+      margin-right: 0.8rem
 
     &:not(:hover):not(:focus) .ui-Icon_Pin
       color: $Colors.Pin_inactive
@@ -83,10 +83,11 @@
     text-transform: uppercase
 
     +at-small()
-      flex-wrap: nowrap
       order: 1
 
-      margin: 0
+      min-height: ($Sizes.HeaderHeight - 2rem)
+      padding: 1rem 0
+      margin: 0 0 0 -1.5rem
 
       font-size: 2.3rem
 
@@ -101,13 +102,6 @@
     align-items: center
 
     padding: 0 1.5rem
-
-    +at-small()
-      padding-top: 26px
-      padding-bottom: 26px
-
-      :first-child > &
-        padding-left: 0
 
     &:not([href]) > .ui-Link-Content
       padding: 5px 13px 3px
