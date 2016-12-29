@@ -1,9 +1,12 @@
 include pug/_common.pug
 
+- delete data.menu[0].href
+- delete data.footerMenu[0].href
+
 +Page({ title: "Code of Conduct" })._CoC
-  +Header
+  +Header({ menu: data.menu })
 
   +b.Content(role="main")
     include:markdown-it(html=true, typographer=true) code-of-conduct.en.md
 
-  +Footer
+  +Footer({ menu: data.footerMenu })

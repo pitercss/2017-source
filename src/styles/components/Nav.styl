@@ -59,8 +59,6 @@
     margin-top: -4px
     margin-left: 1.5rem
 
-    text-transform: lowercase
-
     +at-small()
       height: 6.4rem
       line-height: @height + 0.4rem
@@ -87,9 +85,16 @@
 
       min-height: ($Sizes.HeaderHeight - 2rem)
       padding: 1rem 0
-      margin: 0 0 0 -1.5rem
 
       font-size: 2.3rem
+
+      &&
+        margin: 0 0 0 -1.5rem
+
+      &:last-child:before
+        content: ""
+        height: $Sizes.HeaderHeight_narrow
+        width: 100%
 
   &-Item
     display: inline-block
@@ -102,6 +107,8 @@
     align-items: center
 
     padding: 0 1.5rem
+
+    letter-spacing: 1px
 
     &:not([href]) > .ui-Link-Content
       padding: 5px 13px 3px
