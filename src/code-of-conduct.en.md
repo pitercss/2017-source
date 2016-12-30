@@ -18,7 +18,7 @@ Don’t hesitate to contact us:
     - [simonenko@pitercss.com](mailto:simonenko@pitercss.com)
     - +7 911 274-85-68
 
-- Maria Anykeeva
+- Maria Anikeeva
     - [@not_plasticine](https://twitter.com/not_plasticine)
     - [not_plasticine@pitercss.com](mailto:not_plasticine@pitercss.com)
     - +7 981 765-28-51
