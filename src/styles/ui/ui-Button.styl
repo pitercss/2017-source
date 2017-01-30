@@ -35,7 +35,9 @@
     padding: 0
     border: none
 
-  &:hover
+  &:hover,
+  &:focus
+    outline: none
     color: $Colors.Button
 
   & > .ui-Icon:first-child
@@ -59,3 +61,8 @@
 
     &:active
       background: $Colors.Button_active
+
+  &[disabled],
+  a&:not([href])
+    cursor: default
+    pointer-events: none

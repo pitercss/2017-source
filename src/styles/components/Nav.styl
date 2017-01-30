@@ -36,16 +36,6 @@
     +at-small()
       display: none
 
-    && .ui-Link-Content
-      background-image: none
-
-    &&:hover .ui-Link-Content,
-    &&:focus .ui-Link-Content
-      background-image: linear-gradient(to right, $Colors.LinkUnderline_hover 50%, transparent 0)
-      background-repeat: repeat-x
-      background-size: 6px 1px
-      background-position: 0 calc(50% + 0.6em)
-
     &-Part
       position: relative
       display: block
@@ -83,6 +73,7 @@
     +at-small()
       order: 1
 
+      width: 100%
       min-height: ($Sizes.HeaderHeight - 2rem)
       padding: 1rem 0
 

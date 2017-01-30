@@ -8,23 +8,20 @@
 
 Сразу свяжитесь с нами:
 
-- Вадим Макеев
-
+- **Вадим Макеев**
     - [@pepelsbey](https://twitter.com/pepelsbey)
     - [pepelsbey@pitercss.com](mailto:pepelsbey@pitercss.com)
-    - +7 911 027-90-09
+    - [+7 911 027-90-09](tel:79110279009)
 
-- Алексей Симоненко
-
+- **Алексей Симоненко**
     - [@simonenko](https://twitter.com/simonenko)
     - [simonenko@pitercss.com](mailto:simonenko@pitercss.com)
-    - +7 911 274-85-68
+    - [+7 911 274-85-68](tel:79112748568)
 
-- Мария Аникеева
-
+- **Мария Аникеева**
     - [@not_plasticine](https://twitter.com/not_plasticine)
     - [not_plasticine@pitercss.com](mailto:not_plasticine@pitercss.com)
-    - +7 981 765-28-51
+    - [+7 981 765-28-51](tel:79817652851)
 
 ## Краткая версия
 
