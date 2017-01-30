@@ -63,7 +63,10 @@ gulp.task('svg-icons', function () {
 						styl: true
 					},
 					example: true
-				},
+				}
+			},
+			svg: {
+				namespaceClassnames: false
 			}
 		}))
 		.pipe(gulp.dest("src/_icons"))
