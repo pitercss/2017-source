@@ -65,11 +65,16 @@
       margin-left: 1.6rem
 
   &-Copyright
+    position: relative
+
     color: $Colors.Misc
 
     +at-large()
       height: 2.4rem
       padding-left: 1.5rem
+
+    +at-small()
+      padding-right: 82px
 
     &-Part
       display: block
@@ -137,8 +142,9 @@
         margin-bottom: -1rem
 
       &:not([href]) > .ui-Link-Content
-        padding: 5px 13px 3px
-        margin: -5px -13px -3px
+        padding-left: 13px
+        padding-right: 13px
+        margin: 0 -13px
 
         line-height: 2.2rem
 

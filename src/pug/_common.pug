@@ -116,11 +116,11 @@ mixin Footer(options)
 
   +b.FOOTER.Footer
     +e.Content
-      +e.FORM.Subscribe-(action="")
+      +e.FORM.Subscribe-(action="https://pitercss.us14.list-manage.com/subscribe/post?u=5e93eb3640317ef9257048d9c&id=e052fffa90", method="post")
         +e.LABEL.Header(for="Subscribe")= data.subscribe.label
         +e.P.Field
-          +e.INPUT.Input.ui-Input#Subscribe(type="email", placeholder=data.subscribe.placeholder)
-          +e.BUTTON.Button.ui-Button= data.subscribe.button
+          +e.INPUT.Input.ui-Input#Subscribe(name="EMAIL", type="email", placeholder=data.subscribe.placeholder, required=true)
+          +e.BUTTON.Button.ui-Button(type="submit")= data.subscribe.button
 
       +b.UL.SocialLinks
         +e.Item: +e.Link.ui-Link(href="https://twitter.com/pitercss_conf", title="Twitter"): +svg-icon('SocialIcon_twitter')

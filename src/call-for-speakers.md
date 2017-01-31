@@ -1,4 +1,4 @@
-# Call for speakers
+# Call for Speakers
 
 ## Conference
 

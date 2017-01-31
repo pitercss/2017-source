@@ -1,13 +1,11 @@
 include pug/_common.pug
 
-+Page
++Page._PreLanding
   +Header({ isIndex: true, menu: data.menu })
 
   +b.Content(role="main")
-    p Тут будет лендинг, на основе всех этих блоков, но с пыщь-пыщь стилями.
-    p Пока можно побродить по ссылкам в меню.
-    p
-      = "Или посмотреть на "
-      a(href="all-the-blocks.html")= "полный вариант вёрстки со всеми блоками"
+    +e.Banner
+      h1 saint-p summer css
+      h2 June 16, 2017
 
   +Footer({ isIndex: true, menu: data.footerMenu })
