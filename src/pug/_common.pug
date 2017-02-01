@@ -135,7 +135,7 @@ mixin Footer(options)
               each item in options.menu
                 +e.Item: +e.Link.ui-Link-(href=item.href): +e.Content= item.name
 
-          +e.P.Copyright-(role="contentinfo")= "© Interactive Educational Technologies LLC, 2016—2017"
+          +e.P.Copyright-(role="contentinfo")= "© Interaktivnye Obuchayushchie Tekhnologii LLC, 2016—2017"
 
       +e.Logo(href=(options.isIndex ? false : "index.html"))
         +svg-icon('FooterLogo')
