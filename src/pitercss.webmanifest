@@ -34,7 +34,7 @@
 			"type": "image/svg"
 		}
 	],
-	"start_url": ".",
+	"start_url": "/",
 	"theme_color": "#ff0198",
 	"background_color": "#00e2b5"
 }
