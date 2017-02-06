@@ -1,0 +1,12 @@
+include ../pug/_common.pug
+
+- delete data.menu[0].href
+- delete data.footerMenu[0].href
+
++Page({ title: "Нормы поведения" })._CoC
+  +Header({ menu: data.menu })
+
+  +b.Content(role="main", lang="ru")
+    include:markdown-it(html=true, typographer=true) index.md
+
+  +Footer({ menu: data.footerMenu })

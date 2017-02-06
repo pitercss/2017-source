@@ -28,7 +28,7 @@ const assets = [
 ];
 
 gulp.task('html', () => {
-	return gulp.src('src/*.pug')
+	return gulp.src('src/**/*.pug')
 		.pipe(pug({
 
 		}))
