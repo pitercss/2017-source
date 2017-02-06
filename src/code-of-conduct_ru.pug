@@ -1,7 +1,9 @@
 include pug/_common.pug
 
+- delete data.menu[0].href
+
 +Page({ title: "Нормы поведения" })._CoC
-  +Header
+  +Header({ menu: data.menu })
 
   +b.Content(role="main", lang="ru")
     include:markdown-it(html=true, typographer=true) code-of-conduct.ru.md
