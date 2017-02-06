@@ -1,0 +1,23 @@
+.ui-Cols
+  &-Item
+    margin-top: 3.5rem
+
+  +at-large()
+    display: flex
+    white-space: nowrap
+    align-items: stretch
+
+    &:before
+      content: ''
+      display: inline-block
+      margin-left: -3.5rem
+
+    &-Item
+      display: inline-block
+      vertical-align: top
+
+      white-space: normal
+
+      width: 50%
+      padding-left: 3.5rem
+      margin-top: 0

@@ -1,0 +1,123 @@
+.Nav
+  display: flex
+  flex-grow: 1
+  align-items: center
+
+  +at-small()
+    flex-wrap: wrap
+
+  & > *
+    display: inline-block
+
+  &-Address
+    position: relative
+
+    display: flex
+    flex-shrink: 0
+    flex-direction: column
+    align-self: stretch
+    justify-content: center
+
+    padding-left: 2rem
+    margin-right: 3rem
+
+    font-size: 1.4rem
+    line-height: 2rem
+
+    & .ui-Icon_Pin
+      position: absolute
+      right: 100%
+      top: 3px
+      margin-right: 0.8rem
+
+    &:not(:hover):not(:focus) .ui-Icon_Pin
+      color: $Colors.Pin_inactive
+
+    +at-small()
+      display: none
+
+    &-Part
+      position: relative
+      display: block
+
+    &-City
+      font-family: $Fonts.Bold
+
+  &-Action
+    height: $Sizes.NavActionHeight
+    line-height: @height
+    margin-top: -4px
+    margin-left: 1.5rem
+
+    +at-small()
+      height: 6.4rem
+      line-height: @height + 0.4rem
+      margin: (($Sizes.HeaderHeight_narrow - @height) / 2) 0
+      margin-left: auto
+      padding: 0 2.5rem
+
+      & .ui-Icon
+        display: none
+
+  &-Content
+    display: flex
+    align-self: stretch
+    flex-wrap: wrap
+
+    margin-left: auto
+
+    font-family: $Fonts.Bold
+    font-size: 1.5rem
+    text-transform: uppercase
+
+    +at-small()
+      order: 1
+
+      width: 100%
+      min-height: ($Sizes.HeaderHeight - 2rem)
+      padding: 1rem 0
+
+      font-size: 2.3rem
+
+      &&
+        margin: 0 0 0 -1.5rem
+
+      &:last-child:before
+        content: ""
+        height: $Sizes.HeaderHeight_narrow
+        width: 100%
+
+  &-Item
+    display: inline-block
+    display: flex
+
+  &-Link
+    position: relative
+    display: inline-block
+    display: flex
+    align-items: center
+
+    padding: 0 1.5rem
+
+    letter-spacing: 1px
+
+    &:not([href]) > .ui-Link-Content
+      padding: 5px 13px 3px
+      margin: -5px -13px -3px
+
+      line-height: 2.2rem
+
+      color: $Colors.ActiveItemText
+      background: $Colors.ActiveItem
+
+      border-radius: 99px
+
+      +at-small()
+        padding: 14px 13px 10px
+        margin: -14px -13px -10px
+
+        &:first-child
+          margin-left: 0
+
+    &:not(:hover):not(:focus) > .ui-Link-Content
+      background-image: none

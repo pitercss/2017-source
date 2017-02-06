@@ -1,0 +1,72 @@
+.Header
+  position: relative
+
+  box-shadow: 0 1px $Colors.Divider
+
+  +at-large()
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: $Colors.Page
+
+    z-index: $z-index.above
+
+  +at-small()
+    box-shadow: inset 0 ('calc(%s - 1px)' % $Sizes.HeaderHeight_narrow) #FFF,
+                inset 0 ('calc(%s)' % $Sizes.HeaderHeight_narrow) $Colors.Divider
+
+  &-Content
+    display: flex
+
+    box-sizing: border-box
+    width: $Sizes.PageWidth
+    max-width: 100%
+    max-width: calc(100% - 5rem)
+    height: $Sizes.HeaderHeight
+    padding-top: 4px
+    margin: 0 auto
+
+    +at-small()
+      max-width: calc(100% - 8rem)
+      height: auto
+      padding-top: 0
+
+    & > *
+      display: inline-block
+
+  &-Logo
+    align-self: center
+
+    width: 175px
+    margin-right: 2.5rem
+
+    font-size: 2rem
+    line-height: 2.5rem
+
+    +at-small()
+      position: absolute
+      top: 2.8rem
+
+    & .ui-Icon
+      margin-top: -2px
+
+      color: $Colors.Logo
+
+      +at-small()
+        &-Image
+          width: 212px
+          height: 46px
+
+    &-Date
+      display: block
+      margin-left: 64px
+      margin-top: 0.6rem
+
+      font-size: 1.5rem
+      line-height: 2.3rem
+
+      color: $Colors.LogoText
+
+      +at-small()
+        margin-left: 77px

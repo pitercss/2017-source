@@ -3,7 +3,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gulp deploy",
+    "deploy": "(cd dest && touch z && git add . && git rm -rf .) && gulp build && (cd dest && git add . && git commit -m 'Build up' && git push -f origin gh-pages)",
+    "init-deploy": "rm -rf dest && git clone -b gh-pages git@github.com:pitercss/pitercss.com.git dest",
     "test": "editorconfig-cli && gulp build && ls dest"
   },
   "devDependencies": {
@@ -11,13 +12,15 @@
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
-    "gulp-postcss": "^6.2.0",
-    "gulp-posthtml": "^2.0.0",
-    "gulp-replace": "^0.5.4",
-    "gulp-rsync": "0.0.7",
-    "postcss-csso": "^1.1.2",
-    "postcss-import": "^9.0.0",
-    "posthtml-minifier": "^0.1.0"
+    "gulp-pug": "^3.2.0",
+    "run-sequence": "^1.2.2",
+    "bemto.pug": "^2.0.0",
+    "jstransformer-markdown-it": "^2.0.0",
+    "gulp-rsync": "0.0.6",
+    "stylus": "^0.54.5",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "stylobuild": "^1.0.0"
   },
   "editorconfig-cli": [
     "src/*.html",

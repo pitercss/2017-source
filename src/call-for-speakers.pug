@@ -1,0 +1,11 @@
+include pug/_common.pug
+
+- delete data.footerMenu[1].href
+
++Page({ title: "Call for Speakers" })._CfS
+  +Header({ menu: data.menu, actionIsHidden: true })
+
+  +b.Content(role="main")
+    include:markdown-it(html=true, typographer=true) call-for-speakers.md
+
+  +Footer({ menu: data.footerMenu })

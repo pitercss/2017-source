@@ -8,7 +8,7 @@
         url(../fonts/gotham-pro-regular.woff) format('woff');
     }
 @font-face {
-    font-family: Gotham Pro;
+    font-family: Gotham Pro Bold;
     font-weight: bold;
     font-style: normal;
     src: url(../fonts/gotham-pro-bold.woff2) format('woff2'),

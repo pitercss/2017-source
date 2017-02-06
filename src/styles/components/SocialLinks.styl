@@ -1,0 +1,56 @@
+.SocialLinks
+  position: relative
+
+  display: flex
+  align-self: stretch
+
+  +at-small()
+    margin-right: -1.5em
+
+  &-Item
+    display: inline-block
+    display: flex
+
+    +at-large()
+      overflow: hidden
+
+    &_mail
+      +at-small()
+        order: -1
+        margin-top: 2rem
+        margin-right: auto
+
+      +at-large()
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+
+        text-align: center
+
+  &-Link
+    position: relative
+    display: inline-block
+    display: flex
+    align-items: center
+    justify-content: center
+
+    color: $Colors.SocialLink
+
+    +at-small()
+      :not(^[-1]-Item_mail) > &
+        top: 5rem
+        padding: 0 1.5rem
+
+    +at-large()
+      width: 32px
+      padding: 0 1rem
+
+    ^[0]-Item_mail > &
+      flex-grow: 1
+      width: auto
+
+  +at-small()
+    & .ui-Icon-Image
+      width: 46px
+      height: 44px

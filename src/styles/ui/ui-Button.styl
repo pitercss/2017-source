@@ -1,0 +1,68 @@
+.ui-Button
+  position: relative
+
+  display: inline-block
+  vertical-align: baseline
+
+  box-sizing: border-box
+  max-width: 100%
+  height: $Sizes.ButtonHeight
+  padding: 0 $Sizes.ButtonPaddings
+  border: none
+  margin: 0
+
+  white-space: nowrap
+  text-decoration: none
+
+  font: inherit
+  line-height: @height
+  background: transparent
+
+  -moz-appearance: none
+  cursor: pointer
+  user-select: none
+
+  color: $Colors.Misc
+  box-shadow: inset 0 0 0 2px
+
+  +at-small()
+    height: $Sizes.ButtonHeight_narrow
+    padding-top: 0.4rem
+
+    line-height: @height
+
+  &::-moz-focus-inner
+    padding: 0
+    border: none
+
+  &:hover,
+  &:focus
+    outline: none
+    color: $Colors.Button
+
+  & > .ui-Icon:first-child
+    margin-right: 1.2rem
+    margin-top: -3px
+
+    vertical-align: middle
+
+  &_Action
+    font-family: $Fonts.Bold
+
+    color: $Colors.ActionButtonText
+    background: $Colors.ActionButton
+
+    box-shadow: none
+
+    &:hover,
+    &:focus
+      color: $Colors.ActionButtonText
+      background: $Colors.Button_hover
+
+    &:active
+      background: $Colors.Button_active
+
+  &[disabled],
+  a&:not([href])
+    cursor: default
+    pointer-events: none

@@ -1,0 +1,27 @@
+.Page
+  overflow-y: scroll
+  min-width: 666px
+
+  font-family: $Fonts.Normal
+
+  color: $Colors.PageText
+
+  background: $Colors.Page
+
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+  text-rendering: optimizelegibility
+  -webkit-font-smoothing: subpixel-antialiased
+
+  cursor: default
+
+  &-Body
+    font-size: $Sizes.BodyText
+    line-height: $Sizes.LineHeight
+
+    +at-small()
+      font-size: 3rem
+
+    +at-large()
+      padding-top: $Sizes.HeaderHeight

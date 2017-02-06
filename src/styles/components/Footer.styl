@@ -1,0 +1,154 @@
+.Footer
+  font-size: 1.4rem
+  line-height: 2.4rem
+
+  box-shadow: 0 -1px $Colors.Divider
+
+  +at-small()
+    font-size: 2.3rem
+    line-height: 3.3rem
+
+  &-Content
+    display: flex
+    align-items: center
+
+    width: $Sizes.PageWidth
+    max-width: 100%
+    max-width: calc(100% - 5rem)
+    height: $Sizes.FooterHeight
+    padding-bottom: $Sizes.FooterPadding
+    margin: 0 auto
+
+    +at-small()
+      display: block
+      height: auto
+      max-width: calc(100% - 8rem)
+      padding-top: 5rem
+
+    & > *
+      display: inline-block
+
+  &-Subscribe
+    display: block
+
+    align-self: flex-end
+    flex-shrink: 1
+    flex-grow: 1
+    flex-basis: 50%
+
+    margin-bottom: 1rem
+
+    +at-small()
+      margin-bottom: 4rem
+
+    &-Field
+      +at-small()
+        display: flex
+
+    &-Header
+      display: block
+      width: 100%
+
+      font-size: 2rem
+      line-height: 3rem
+      margin-bottom: 0.6rem
+
+      +at-small()
+        font-size: 2.3rem
+
+
+    &-Input
+      +at-small()
+        flex-grow: 1
+
+    &-Button
+      margin-left: 1.6rem
+
+  &-Copyright
+    position: relative
+
+    color: $Colors.Misc
+
+    +at-large()
+      height: 2.4rem
+      padding-left: 1.5rem
+
+    +at-small()
+      padding-right: 82px
+
+    &-Part
+      display: block
+
+  &-Logo
+    color: $Colors.Logo
+    margin-top: auto
+    margin-left: 50px
+    margin-bottom: 0.8rem
+
+    color: $Colors.Logo_closing
+
+    +at-small()
+      float: right
+      margin-left: 0
+      margin-top: -70px
+
+      & .ui-Icon_FooterLogo .ui-Icon-Image
+        width: 76px
+        height: 70px
+
+  &-Info
+    display: flex
+    align-self: stretch
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: flex-end
+    flex-shrink: 1
+    flex-grow: 1
+    flex-basis: calc(50% - 10rem)
+
+    &-Content
+      +at-small()
+        width: 100%
+
+  &-MustRead
+    display: flex
+    align-self: stretch
+
+    +at-small()
+      flex-direction: column
+
+      margin-left: -1.5rem
+      margin-bottom: 4rem
+
+    &-Item
+      display: inline-block
+      display: flex
+
+      +at-large()
+        height: $Sizes.FooterHeight - 2.4rem
+
+    &-Link
+      position: relative
+      display: inline-block
+      display: flex
+      align-items: center
+
+      white-space: nowrap
+
+      padding: 0 1.5rem
+
+      +at-large()
+        margin-bottom: -1rem
+
+      &:not([href]) > .ui-Link-Content
+        padding-left: 13px
+        padding-right: 13px
+        margin: 0 -13px
+
+        line-height: 2.2rem
+
+        color: $Colors.ActiveItemText
+        background: $Colors.ActiveItem
+
+        border-radius: 99px

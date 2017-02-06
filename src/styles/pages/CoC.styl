@@ -1,0 +1,14 @@
+.Page_CoC
+  & .Content
+    & > ul
+      +at-large()
+        display: flex
+        justify-content: space-between
+        align-self: flex-start
+
+      & > li
+        margin-top: 0
+
+    & > p:last-child
+      margin-top: 4rem
+      @extends .Content p.is-small

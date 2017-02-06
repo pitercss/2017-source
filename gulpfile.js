@@ -1,43 +1,75 @@
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const posthtml = require('gulp-posthtml');
-const replace = require('gulp-replace');
+const runSequence = require('run-sequence');
+
+const svgSprite = require("gulp-svg-sprite");
+
+const stylus = require('gulp-stylus');
+const _stylus = require('stylus');
+const stylobuild = require('stylobuild');
+
+const pug = require('gulp-pug');
+
 const rsync = require('gulp-rsync');
 const sync = require('browser-sync').create();
 
 const assets = [
 	'src/**',
-	'!src/index.html',
-    '!src/styles{,/**}',
-	'!src/styles.css',
+	'!src/svg{,/**}',
+	'!src/_icons{,/**}',
+	'!src/styles{,/**}',
+	'!src/scripts{,/**}',
+	'!src/fonts{,/**}',
+	'!src/pug{,/**}',
+	'!src/**/*.pug',
+	'!src/**/*.md',
+	'!src/**/*.js',
+	'!src/**/*.styl',
 	'!src/**/*~'
 ];
 
 gulp.task('html', () => {
-	return gulp.src('src/index.html')
-		.pipe(posthtml([
-			require('posthtml-minifier')({
-				removeComments: true,
-				collapseWhitespace: true
-			})
-		]))
+	return gulp.src('src/*.pug')
+		.pipe(pug({
+
+		}))
 		.pipe(gulp.dest('dest'))
 		.pipe(sync.stream());
 });
 
 gulp.task('styles', () => {
-	return gulp.src('src/styles.css')
-		.pipe(postcss([
-            require('postcss-import')(),
-			require('autoprefixer')(),
-			require('postcss-csso')()
-		]))
-        .pipe(replace(
-            /(url\()(..\/)/g,
-            '$1', { skipBinary: true }
-        ))
+	return gulp.src('src/*.styl')
+		.pipe(stylus({
+			'include css': true,
+			use: stylobuild({}),
+			define: {
+				url: _stylus.resolver()
+			}
+		}))
 		.pipe(gulp.dest('dest'))
 		.pipe(sync.stream());
+});
+
+gulp.task('svg-icons', function () {
+	return gulp.src('src/svg/*.svg')
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					inline: true,
+					prefix: '.ui-Icon_%s .ui-Icon-Image',
+					dest: '',
+					dimensions: '%s',
+					sprite: 'sprite.svg',
+					render: {
+						styl: true
+					},
+					example: true
+				}
+			},
+			svg: {
+				namespaceClassnames: false
+			}
+		}))
+		.pipe(gulp.dest("src/_icons"))
 });
 
 gulp.task('copy', () => {
@@ -56,9 +88,10 @@ gulp.task('server', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch('src/index.html', ['html']);
-	gulp.watch('src/styles/*.css', ['styles']);
-    gulp.watch(assets, ['copy']);
+	gulp.watch(['src/**/*.pug', 'src/**/*.md', 'src/**/*.js'], ['html']);
+	gulp.watch(['src/**/*.css', 'src/**/*.styl'], ['styles']);
+	gulp.watch('src/svg/*.svg', ['build-assets-with-icons']);
+	gulp.watch(assets, ['copy']);
 });
 
 gulp.task('deploy', () => {
@@ -75,10 +108,19 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('build', [
-	'html',
-	'styles',
-    'copy'
+	'build-assets-with-icons',
+	'copy'
 ]);
+
+gulp.task('build-assets', [
+	'html',
+	'styles'
+]);
+
+gulp.task('build-assets-with-icons', (done) => {
+	runSequence('svg-icons', 'build-assets', done);
+});
+
 
 gulp.task('default', [
 	'build',

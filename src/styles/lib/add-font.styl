@@ -1,0 +1,12 @@
+add-font($name, $file, $selector = null, $encoding = 'woff')
+  @font-face
+    font-family: $name
+    font-weight: normal
+    font-style: normal
+    src: embedurl($file + '.' + $encoding) format($encoding)
+
+  if $selector
+    {$selector}
+      font-family: $name, Helvetica Neue, Helvetica, Arial, sans-serif
+      font-style: normal
+      font-weight: normal
