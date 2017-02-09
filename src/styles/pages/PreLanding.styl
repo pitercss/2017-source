@@ -18,12 +18,11 @@
       align-items: center
       position: relative
 
-      background: url('images/Scissors.jpg') 100% 10px no-repeat
+      background: url('images/Scissors.jpg') 100% 50% no-repeat
+      background-size: 325px 850px;
 
-      +at-retina()
-        background-image: url('images/Scissors@2x.jpg')
-        background-size: image-size('../../images/Scissors.jpg')
-
+      +at-tall()
+        background-position: 100% 10px
 
     & ::selection
       background: $_BrandColors.Purple

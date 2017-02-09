@@ -1,9 +1,13 @@
 at-large()
-  @media screen and (min-width: 1024px), print
+  @media (min-width: 1024px), print
     {block}
 
 at-small()
-  @media screen and (max-width: 1023px)
+  @media (max-width: 1023px)
+    {block}
+
+at-tall()
+  @media (max-height: 1130px)
     {block}
 
 at-retina()
