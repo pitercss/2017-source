@@ -74,6 +74,11 @@ If your employer can cover your travel and hotel, we’ll be happy to list th
 
 We are developers and members of Russian front-end communities organizing conferences and local meetups since 2007. We know what makes a good conference and ready to make the best one Russia have ever seen. But we can’t do it without you, the great speakers. Don’t hesitate, join us on stage!
 
+<figure class="is-wider">
+    <img src="/images/team.jpg" srcset="/images/team@2x.jpg 2x" alt="Photo of Alexey, Maria, Vadim">
+    <figcaption>pitercss_conf organizers: Alexey, Maria, Vadim</figcaption>
+</figure>
+
 ## Code of Conduct
 
 Our [code of conduct](/code-of-conduct/) aims to create a safe and welcoming space for our community members, and to protect every attendee, staff member and speaker from harassment. Thus we need you to read, understand, and comply with our code of conduct.
