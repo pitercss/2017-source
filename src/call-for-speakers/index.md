@@ -14,6 +14,15 @@ In case you don’t speak Russian, it’s the first time when you’re truly we
 
 And all this in the most beautiful and the most European city in Russia during the famous white nights season.
 
+## Who we are
+
+We are developers and members of Russian front-end communities organizing conferences and local meetups since 2007. We know what makes a good conference and ready to make the best one Russia have ever seen. But we can’t do it without you, the great speakers. Don’t hesitate, join us on stage!
+
+<figure class="is-wider">
+    <img src="/images/team.jpg" srcset="/images/team@2x.jpg 2x" alt="Photo of Alexey, Maria, Vadim">
+    <figcaption>pitercss_conf organizers: Alexey, Maria, Vadim</figcaption>
+</figure>
+
 ## Topics
 
 We want to discuss the whole set of visual front-end technologies:
@@ -69,15 +78,6 @@ If your proposal is selected, here’s what you’ll get:
 - Accommodation in a hotel.
 
 If your employer can cover your travel and hotel, we’ll be happy to list them as a sponsor. The money we save will be invested into making this conference even better.
-
-## Who we are
-
-We are developers and members of Russian front-end communities organizing conferences and local meetups since 2007. We know what makes a good conference and ready to make the best one Russia have ever seen. But we can’t do it without you, the great speakers. Don’t hesitate, join us on stage!
-
-<figure class="is-wider">
-    <img src="/images/team.jpg" srcset="/images/team@2x.jpg 2x" alt="Photo of Alexey, Maria, Vadim">
-    <figcaption>pitercss_conf organizers: Alexey, Maria, Vadim</figcaption>
-</figure>
 
 ## Code of Conduct
 
