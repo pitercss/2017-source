@@ -32,11 +32,12 @@ mixin Page(options)
       link(rel="icon", type="image/png", href="/images/icon-228x228.png", sizes="228x228")
       link(rel="apple-touch-icon", type="image/png", href="/images/icon-228x228.png")
       link(rel="image_src", href="https://pitercss.com/images/og-vk.png")
+      meta(name="description", content="Saint-P, summer, CSS. Full-day, single track, English-speaking front-end conference in St. Petersburg, Russia on June 16th, 2017.")
       meta(name="twitter:card", content="summary_large_image")
       meta(name="twitter:site", content="@pitercss")
       meta(name="twitter:url", property="og:url", content="https://pitercss.com")
       meta(name="twitter:title", property="og:title", content="pitercss conference")
-      meta(name="twitter:description", property="og:description", content="saint-p summer css, june 2017")
+      meta(name="twitter:description", property="og:description", content="Saint-P, summer, CSS. June 16th, 2017")
       meta(name="twitter:image", property="og:image", content="https://pitercss.com/images/og-fb.png")
       meta(property="og:type", content="website")
       meta(property="og:site_name", content="pitercss")
@@ -52,7 +53,7 @@ mixin Page(options)
         onload="this.rel='stylesheet'"
         )
 
-      title= options.title || "pitercss conference"
+      title= options.title || "PiterCSS Conference"
 
     +e.BODY.Body
       include ../_icons/sprite.svg
@@ -80,7 +81,7 @@ mixin Header(options)
   +b.HEADER.Header(role="banner")
     +e.Content
       +e.H1.Logo-
-        +svg-icon('Logo')(width="175", height="38", title="PiterCSS Conference. 16 June, 2017", href=(options.isIndex ? false : "/"))
+        +svg-icon('Logo')(width="175", height="38", title="PiterCSS Conference. June 16th, 2017", href=(options.isIndex ? false : "/"))
           +b.Header-Logo-Date= data.date
 
       +b.NAV.Nav(role="navigation")
@@ -124,7 +125,7 @@ mixin Footer(options)
 
       +b.UL.SocialLinks
         +e.Item: +e.Link.ui-Link(href="https://twitter.com/pitercss_conf", title="Twitter"): +svg-icon('SocialIcon_twitter')
-        +e.Item: +e.Link.ui-Link(href="https://www.facebook.com/pitercss/", title="Facebook"): +svg-icon('SocialIcon_facebook')
+        +e.Item: +e.Link.ui-Link(href="https://www.facebook.com/pitercssconf/", title="Facebook"): +svg-icon('SocialIcon_facebook')
         +e.Item: +e.Link.ui-Link(href="https://github.com/pitercss/pitercss.com", title="GitHub"): +svg-icon('SocialIcon_github')
         +e.Item_mail: +e.Link.ui-Link(href="mailto:hi@pitercss.com")= "hi@pitercss.com"
 
