@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-We’re inviting you to submit a talk or idea for pitercss_conf on June 16th, 2017 in St. Petersburg, Russia. We speak English. Topics: HTML, CSS, SVG, etc. Decision won’t take long. We’ll help you to prepare your talk and cover all expenses, such as road and accommodation. Submission is opened until **April 30th**.
+We’re inviting you to submit a talk or idea for pitercss_conf on June 16th, 2017 in St. Petersburg, Russia. We speak English and have [code of conduct](/code-of-conduct/). Topics: HTML, CSS, SVG, etc. Decision won’t take long. We’ll help you to prepare your talk and cover all expenses, such as road and accommodation. Submission is opened until **April 30th**.
 
 <a class="ui-Button ui-Button_Action" href="https://docs.google.com/a/pitercss.com/forms/d/e/1FAIpQLSfRjS2YFPuQimag7j6jJ4AXCuCXJ9f2d2zUoHE2xC4HkYioNg/viewform">Submit a Talk</a>
 
