@@ -95,7 +95,7 @@ gulp.task('watch', () => {
 });
 
 gulp.task('deploy', () => {
-	return gulp.src('dest/**')
+	return gulp.src('dest/**/*')
 		.pipe(rsync({
 			root: 'dest',
 			hostname: 'pitercss.com',
