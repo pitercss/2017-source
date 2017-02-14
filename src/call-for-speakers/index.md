@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-We’re inviting you to submit a talk or idea for pitercss_conf on June 16th, 2017 in St. Petersburg, Russia. We speak English and have [code of conduct](/code-of-conduct/). Topics: HTML, CSS, SVG, etc. Decision won’t take long. We’ll help you to prepare your talk and cover all expenses, such as road and accommodation. Submission is opened until **April 30th**.
+We’re inviting you to submit a talk or idea for pitercss_conf on June 16th, 2017 in St. Petersburg, Russia. We speak English and have a [code of conduct](/code-of-conduct/). Topics: HTML, CSS, SVG, etc. Decision won’t take long. We’ll help you to prepare your talk and cover all expenses, such as travel and accommodation. Submission is open until **April 30th**.
 
 <a class="ui-Button ui-Button_Action" href="https://docs.google.com/a/pitercss.com/forms/d/e/1FAIpQLSfRjS2YFPuQimag7j6jJ4AXCuCXJ9f2d2zUoHE2xC4HkYioNg/viewform" target="_blank">Submit a Talk</a>
 
@@ -10,13 +10,13 @@ We’re inviting you to submit a talk or idea for pitercss_conf on June 16th
 
 It’s a full-day, single track, English-speaking front-end conference in St. Petersburg, Russia on June 16th, 2017. The very first Russian conference fully dedicated to visual front-end technologies.
 
-In case you don’t speak Russian, it’s the first time when you’re truly welcome: English is our main language for talks, discussions, and all issues. If you speak Russian, this is your chance to see the real European conference without leaving the country. Why English? We’re trying to unite Russian and worldwide communities.
+In case you don’t speak Russian, it’s the first time when you’re truly welcome: English is our main language for talks, discussions, and all issues. If you speak Russian, this is your chance to participate in a real European conference without leaving the country. Why English? We’re trying to unite Russian and global communities.
 
 And all this in the most beautiful and the most European city in Russia during the famous white nights season.
 
 ## Who we are
 
-We are developers and members of Russian front-end communities organizing conferences and local meetups since 2007. We know what makes a good conference and ready to make the best one Russia have ever seen. But we can’t do it without you, the great speakers. Don’t hesitate, join us on stage!
+We are developers and members of Russian front-end communities organizing conferences and local meetups since 2007. We know what makes a good conference and ready to make the best one Russia has ever seen. But we can’t do it without you, the great speakers. Don’t hesitate, join us on stage!
 
 <figure class="is-wider">
     <img src="/images/team.jpg" srcset="/images/team@2x.jpg 2x" alt="Photo of Alexey, Maria, Vadim">
@@ -46,36 +46,36 @@ You’re welcome to submit multiple talks or even raw ideas.
 
 ## Guidelines
 
-To have more chances to get your talk accepted, there are following criteria:
+To have more chances to get your talk accepted, note the following rules:
 
 - **Language:** all talks are in English, with no exception.
-- **Duration:** you’ll have 30 minutes and optional 10 minutes for QA.
-- **Quality:** visual fidelity, great typography, perfect styling, and good contrast.
+- **Duration:** you’ll have 30 minutes and optional 10 minutes for Q&A.
+- **Presentation Quality:** visual fidelity, great typography, perfect styling, and good contrast.
 - **Originality:** we prefer premieres and unique topics to anything you’ve already presented elsewhere or anything well-known among developers.
 - **Brevity:** give it a catchy name and try to describe the main plot in a couple of paragraphs instead of writing the whole text.
 
-We’re not limiting your creativity, but helping to deliver your message the best way possible.
+We’re not limiting your creativity, but helping to deliver your message in the best way possible.
 
 ## We can help
 
-Have an idea or unique experience but not sure how to make it up as a talk? Don’t worry, we’ve helped many speakers before to tell good stories.
+Have an idea or unique experience but not sure how to turn it into a talk? Don’t worry, we’ve helped many speakers before to tell good stories.
 
 - **Never presented on stage?** We will be guiding you through preparation process and rehearsing your talk via video chat.
-- **Not a native English speaker?** We could help to rehearse and proofread your talk, but intermediate language skills are required.
+- **Not a native English speaker?** We can help to rehearse and proofread your talk, but intermediate language skills are required.
 - **Had a bad experience on a conference before?** We truly care about our speakers and audience to help everyone feel comfortable, safe and welcome.
 
 ## Selection
 
-Once your talk or idea is submitted you’ll get a confirmation. Then within a week we’ll get back to you. In most cases we don’t decline a submission, but rather schedule a quick call to figure out details. Once everything is clear we’ll give you the final decision.
+Once your talk or idea is submitted you’ll get a confirmation. Then, within a week we’ll get back to you. In most cases we don’t decline a submission, but rather schedule a quick call to figure out the details. Once everything is clear we’ll give you the final decision.
 
 ## What you get
 
 If your proposal is selected, here’s what you’ll get:
 
 - Travel to St. Petersburg.
-- Support in visa process.
+- Support in visa application process.
 - Entry to the conference.
-- Accommodation in a hotel.
+- Hotel accommodation.
 
 If your employer can cover your travel and hotel, we’ll be happy to list them as a sponsor. The money we save will be invested into making this conference even better.
 
