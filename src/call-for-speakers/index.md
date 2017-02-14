@@ -50,7 +50,7 @@ To have more chances to get your talk accepted, note the following rules:
 
 - **Language:** all talks are in English, with no exception.
 - **Duration:** you’ll have 30 minutes and optional 10 minutes for Q&A.
-- **Presentation Quality:** visual fidelity, great typography, perfect styling, and good contrast.
+- **Quality:** visual fidelity, great typography, perfect styling, and good contrast on your slides.
 - **Originality:** we prefer premieres and unique topics to anything you’ve already presented elsewhere or anything well-known among developers.
 - **Brevity:** give it a catchy name and try to describe the main plot in a couple of paragraphs instead of writing the whole text.
 
