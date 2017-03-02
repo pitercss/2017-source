@@ -25,3 +25,9 @@
 
     +at-large()
       padding-top: $Sizes.HeaderHeight
+
+  &-Content
+    box-sizing: border-box
+    min-height: "calc(100vh - %s)" % ($Sizes.HeaderHeight + $Sizes.FooterHeight + $Sizes.FooterPadding)
+
+    cursor: initial

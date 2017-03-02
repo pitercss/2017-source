@@ -6,7 +6,7 @@ include ../pug/_common.pug
 +Page({ title: "Code of Conduct" })._CoC
   +Header({ menu: data.menu })
 
-  +b.Content(role="main")
+  +b.Content.-Content(role="main")
     include:markdown-it(html=true, typographer=true) index.md
 
   +Footer({ menu: data.footerMenu })

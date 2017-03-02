@@ -1,0 +1,68 @@
+// So it would be guaranteed that it would override `Content`
+@require 'content.styl'
+
+.Section
+  width: auto
+  max-width: auto
+  padding: 3.5rem 0
+  margin: 0
+
+  &:last-child
+    padding-bottom: 8rem
+
+  &_Landing.Content
+    display: flex
+
+    min-height: "calc(100vh - %s)" % ($Sizes.HeaderHeight + $Sizes.FooterHeight + $Sizes.FooterPadding)
+    padding: 0
+
+    background: $Colors.PreLanding
+    color: $Colors.PreLandingText
+
+    & > ^[0]-Banner
+      display: flex
+      align-items: center
+      position: relative
+
+      background: url('images/Scissors.jpg') 100% 50% no-repeat
+      background-size: 325px 850px;
+
+      +at-tall()
+        background-position: 100% 10px
+
+    +at-tall()
+      background-position: 100% 10px
+
+    & ::selection
+      background: $_BrandColors.Purple
+
+    & h1
+      width: min-content
+      padding: 0.5em 0
+      margin: 0
+      margin-left: -0.025em
+      margin-right: 4.8rem
+
+      font-size: 16rem
+      letter-spacing: -3px
+      line-height: 0.8125
+
+      color: inherit
+
+      +at-small()
+        font-size: 12.8rem
+
+    & h2
+      position: absolute
+      top: 50%
+      right: 1em
+
+      margin: 0
+
+      font-size: 4.8rem
+      line-height: 1
+
+      color: $Colors.PageText
+
+      transform: rotate(-90deg) translateX(50%)
+      transform-origin: 100% 0

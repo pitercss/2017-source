@@ -1,13 +1,32 @@
 include pug/_common.pug
 
-+Page._PreLanding
++Page
   +Header({ isIndex: true, menu: data.menu })
 
-  +b.Content(role="main")
-    +e.Banner
-      h1
-        abbr(title="Saint Petersburg") saint-p
-        = " summer css"
-      h2 June 16th, 2017
+  +e.Content(role="main")
+    +b.Section_Landing.Content
+      +e.Banner
+        h1
+          abbr(title="Saint Petersburg") saint-p
+          = " summer css"
+        h2 June 16th, 2017
+
+    +b.Section.Content
+      h2 Mission
+
+    +b.Section.Content
+      h2 Schedule
+
+    +b.Section.Content
+      h2 It will be cool!
+
+    +b.Section.Content#Ticket
+      h2 Make your badge
+
+    +b.Section.Content
+      h2 Thanks to all these people
+
+    +b.Section.Content
+      | Wanna be a speaker? | Code of Conduct
 
   +Footer({ isIndex: true, menu: data.footerMenu })

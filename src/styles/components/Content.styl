@@ -1,11 +1,9 @@
 .Content
-  min-height: "calc(100vh - %s)" % ($Sizes.HeaderHeight + $Sizes.FooterHeight + $Sizes.FooterPadding + 11.5rem)
-  padding: 3.5rem 0 8rem
+  &.Page-Content
+    padding: 3.5rem 0 8rem
 
-  cursor: initial
-
-  +at-small()
-    padding-top: 0
+    +at-small()
+      padding-top: 0
 
   & > * // Making it possible to override on children
     width: $Sizes.ContentWidth
