@@ -1,0 +1,75 @@
+.PriceInfo
+  margin-bottom: 0
+
+  &-Controller
+    position: absolute
+    clip: rect(1px,1px,1px,1px)
+
+
+  &-Content
+    position: relative
+    overflow: hidden
+
+    :checked + &
+      display: none
+
+  &-Close
+    position: absolute
+    z-index: $z-index.above
+    top: 26px
+    right: 16px
+
+    cursor: pointer
+
+    &:hover,
+    &:focus
+      color: $_BrandColors.Purple
+
+    & > .ui-Icon
+      display: block
+
+  &-PriceChange
+    position: relative
+
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+
+    height: 5rem
+    padding: 20px 14px
+    border: 4px solid
+    margin-top: 10px
+    margin-bottom: 1.6rem
+
+    background: #FFF
+
+    &:before
+      content: ""
+      position: absolute
+      top: -3px
+      right: 33%
+
+      width: 16px
+      height: 16px
+      border: solid
+      border-width: 4px 0 0 4px
+
+      background: #FFF
+      background-clip: padding-box
+
+      transform: translateY(0.5px) translate(-50%, -50%) scale(1, 0.8) rotate(45deg)
+
+    &-When
+      font-size: 1.4rem
+      line-height: 2rem
+
+      &:nth-of-type(n+2)
+        color: #B4BDC7
+
+    &-What
+      font-family: $Fonts.Bold
+      font-size: 2rem
+      line-height: 3rem
+
+      &:nth-of-type(n+2)
+        color: #B4BDC7

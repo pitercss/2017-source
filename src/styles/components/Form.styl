@@ -1,0 +1,126 @@
+.Form
+  display: flex
+  flex-wrap: wrap
+
+  & > *
+    flex-basis: calc(50% - 2.4rem)
+    flex-grow: 1
+    margin-right: 2.4rem
+    margin-bottom: 1.6rem
+
+  &-Label
+    position: relative
+    display: flex
+    flex-direction: column
+
+    &-Text
+      order: -1
+      font-size: 1.4rem
+      color: #B4BDC7
+
+    &-Error
+      font-size: 1.4rem
+      color: $Colors.Input_error
+
+    &:hover &-Text,
+    :focus + &-Text
+      color: $_BrandColors.Green
+
+  &-Label > &-Input
+    display: block
+    width: 100%
+
+  & .ui-Input
+    padding-right: 24px
+    padding-bottom: 1.4rem
+    box-shadow: inset 0 -2px 0
+
+    &.with-error
+      box-shadow: inset 0 -2px 0 $Colors.Input_error
+
+    &:hover,
+    &:focus
+      box-shadow: inset 0 -2px 0 $_BrandColors.Green
+
+  &-Status
+    position: absolute
+    top: 25px
+    right: 0
+    width: 24px
+    text-align: center
+
+  &-Status > .ui-Icon
+    display: none
+
+  .with-error + * + &-Status > .ui-Icon_Error,
+  .is-valid + * + &-Status > .ui-Icon_Valid
+    display: inline-block
+
+
+  & .ui-Link
+    font-size: 1.4rem
+
+  &-PaymentSystem
+    display: flex
+
+    box-shadow: inset 0 0 0 2px #B4BDC7
+
+    &-Input
+      position: absolute
+      clip: rect(1px,1px,1px,1px)
+
+    &-Item
+      flex-grow: 1
+
+    &-View
+      cursor: pointer
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      height: 48px
+
+      color: #B4BDC7
+
+      :focus + &
+        box-shadow: 0 0 0 3px $_BrandColors.Green
+
+      :not(:checked) + &:hover
+        color: #77808A
+
+      :checked + &
+        cursor: default
+
+        background: #77808A
+        color: #FFF
+
+  & .PriceInfo
+    flex-basis: 100%
+
+  &-Disclaimer
+    flex-basis: 100%
+
+    margin-top: 5px
+
+    text-align: right
+
+    font-size: 1.4rem
+
+    color: #77808A
+
+  &-Action
+    height: 70px
+    margin-top: 23px
+
+    font-size: 2.6rem
+
+  &-Promo
+    flex-basis: 0
+
+    width: 175px
+    min-width: 175px
+    margin-top: 4.8rem
+
+  &-CachlessInfo
+    margin-top: 1rem

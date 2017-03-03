@@ -3,7 +3,7 @@
 
 .Section
   width: auto
-  max-width: auto
+  max-width: none
   padding: 3.5rem 0
   margin: 0
 
@@ -25,7 +25,7 @@
       position: relative
 
       background: url('images/Scissors.jpg') 100% 50% no-repeat
-      background-size: 325px 850px;
+      background-size: 325px 850px
 
       +at-tall()
         background-position: 100% 10px
@@ -66,3 +66,53 @@
 
       transform: rotate(-90deg) translateX(50%)
       transform-origin: 100% 0
+
+  &_Badge
+    padding-top: 7rem
+    padding-bottom: 9.5rem
+
+    background-color: #F6F6F6
+
+    +at-large()
+      background-image: linear-gradient(to right, transparent ('calc(50% + %s - %s)' % (0.5*$Sizes.PageWidth 0.5*$Sizes.BadgeWidth)), $_BrandColors.Green 0),
+                        linear-gradient(to right, transparent ('calc(100% - %s - 2.5rem)' % (0.5*$Sizes.BadgeWidth)), $_BrandColors.Green 0)
+
+  &-BadgeWrap
+    +at-large()
+      display: flex
+
+  &-BadgeForm
+    flex-grow: 1
+
+    +at-large()
+      & > *
+        max-width: 72rem
+
+  &-Badge
+    margin-top: 4.7rem
+    margin-left: 28px
+
+  &_SpeakAndConduct
+    margin-top: 7rem
+
+    & .ui-Link_Bright
+      display: inline-block
+      margin-top: 1rem
+
+    & .ui-Button_Bright
+      margin-top: 4rem
+
+    & .ui-Block
+      height: auto
+      margin-top: 3.5rem
+
+
+  &_Mission
+    padding-top: 7rem
+
+    & > ^[0]-Banner
+      min-height: 466px
+      padding-left: 352px
+
+      background: url('images/Rock.jpg') 0 0 no-repeat
+      background-size: 296px 466px
