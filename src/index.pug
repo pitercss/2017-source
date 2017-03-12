@@ -64,6 +64,16 @@ include pug/_common.pug
                 +svg-icon('Error')
               +e.Label-Error= "We can not send this address confirmation"
 
+            +e.Badge.Section-Badge
+              +b.Badge
+                +svg-icon('Logo_ticket')
+                +e.Name= "konstantin"
+                +e.Name= "konstantinopolskiy"
+                +e.Info= "jet brains"
+                +e.Info= "#df665d"
+                +svg-icon('Logo_ticketClose')
+                +e.Label(style="background-color:#DF665D")
+
             +e.PaymentSystem-
               +e.LABEL.Item
                 +e.INPUT.Input(name="PaymentSystem", type="radio", checked=true)
@@ -98,16 +108,6 @@ include pug/_common.pug
               +b.ui-Link(href="#x"): +e.Content= "the terms of use"
               = " and "
               +b.ui-Link(href="#x"): +e.Content= "Code of Conduct"
-
-
-        +b.Badge.-Badge
-          +svg-icon('Logo_ticket')
-          +e.Name= "konstantin"
-          +e.Name= "konstantinopolskiy"
-          +e.Info= "jet brains"
-          +e.Info= "#df665d"
-          +svg-icon('Logo_ticketClose')
-          +e.Label(style="background-color:#DF665D")
 
     +b.Section_SpeakAndConduct.Content
       +b.ui-Cols.is-wider

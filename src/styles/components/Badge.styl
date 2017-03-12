@@ -18,9 +18,12 @@
     height: 20px
     margin: 36px auto 0
 
-    background-image: linear-gradient(to right, #F6F6F6 50%, $_BrandColors.Green 0)
-
     border-radius: 50%
+
+    background: $_BrandColors.Green
+
+    +at-large()
+      background-image: linear-gradient(to right, #F6F6F6 50%, $_BrandColors.Green 0)
 
   &-Name
     overflow: hidden

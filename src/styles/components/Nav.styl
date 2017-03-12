@@ -44,8 +44,12 @@
       font-family: $Fonts.Bold
 
   &-ActionWrap
-    margin-top: -4px
-    margin-left: 1.5rem
+    +at-large()
+      margin-top: -4px
+      margin-left: 1.5rem
+
+    +at-small()
+      margin-left: auto
 
   &-ActionDescription
     margin-top: 1rem
@@ -54,6 +58,9 @@
     line-height: 1
 
     color: $Colors.ActionButton
+
+    +at-small()
+      display: none
 
   &-Action
     display: block
