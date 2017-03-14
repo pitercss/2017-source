@@ -8,7 +8,7 @@ include _data.pug
     modifier: '_'
   })
 
-mixin svg-icon(name)
+mixin svg-icon(name, title)
   - var attributes = attributes || {}
   - var width = attributes.width || 16
   - var height = attributes.height || 16
@@ -16,6 +16,8 @@ mixin svg-icon(name)
     +e.SVG.Image(width=width, height=height)
       use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#" + name)
       +e.RECT.Helper
+        if title
+          title= title
     block
 
 mixin Page(options)
@@ -100,13 +102,16 @@ mixin Header(options)
               +e.Item: +e.A.Link.ui-Link-(href=item.href): +e.Content= item.name
 
         - var action = options.action || data.action
-        +e.A.Action.ui-Button_Action(href=(options.actionIsHidden ? false : action.href))
-          if action.text
-            = action.text
-          else
-            if action
-              +svg-icon('Ticket')
-              = "2500₽ / €40 / $38"
+        if action
+          +e.ActionWrap
+            +e.A.Action.ui-Button_Action(href=action.href)
+              if action.icon
+                +svg-icon('Ticket')
+              if action.text
+                = action.text
+            if action.description
+              +e.ActionDescription
+                = "≈ 28,34 US$ or  26,74 € "
 
 
 mixin Footer(options)

@@ -6,8 +6,12 @@
     color: $Colors.Link
 
   &-Content
+    .ui-Icon + &
+      margin-left: 1rem
+
     &,
-    /.Content a:not([class])
+    /.Content a:not([class]),
+    ^[0]_Bright
       padding: 0.35em 0
 
       background-repeat: repeat-x
@@ -21,11 +25,24 @@
       ^[0][href]:hover &,
       ^[0][href]:focus &,
       /.Content a:not([class])[href]:hover,
-      /.Content a:not([class])[href]:focus
+      /.Content a:not([class])[href]:focus,
+      ^[0]_Bright:hover,
+      ^[0]_Bright:focus
         background-image: linear-gradient($Colors.LinkUnderline_hover, $Colors.LinkUnderline_hover)
 
 
   &[href]:hover,
   &[href]:focus,
+  &_Bright,
   /.Content a:not([class])[href]
     color: $Colors.Link_hover
+
+  & .ui-Icon
+    margin-top: -0.2em
+
+  &_Bright
+    font-family: $Fonts.Bold
+
+    color: $Colors.Link_hover
+
+    background-size: 16px 2px

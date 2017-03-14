@@ -1,0 +1,71 @@
+.Badge
+  position: relative
+  display: flex
+  flex-direction: column
+
+  width: $Sizes.BadgeWidth
+  height: $Sizes.BadgeHeight
+
+  background: #FFF
+  box-shadow: 0 35px 70px -35px rgba(#000, 0.3)
+
+  &:before
+    content: ""
+
+    display: block
+
+    width: 20px
+    height: 20px
+    margin: 36px auto 0
+
+    border-radius: 50%
+
+    background: $_BrandColors.Green
+
+    +at-large()
+      background-image: linear-gradient(to right, #F6F6F6 50%, $_BrandColors.Green 0)
+
+  &-Name
+    overflow: hidden
+    margin: 0 28px
+
+    white-space: nowrap
+
+    font-family: $Fonts.Bold
+    font-size: 26px
+    line-height: 34px
+
+  &-Name + &-Info
+    margin-top: 4px
+
+  &-Info
+    overflow: hidden
+    margin: 0 28px 0 90px
+
+    white-space: nowrap
+
+    font-size: 20px
+    line-height: 34px
+
+  &-Label
+    flex-grow: 1
+
+  & > .ui-Icon_Logo_ticket
+    display: block
+    margin: 8px 0 51px 28px
+
+  & > .ui-Icon_Logo_ticketClose
+    display: block
+    margin: 30px 28px 28px
+
+    & > .ui-Icon-Image
+      margin-left: auto
+
+.BadgeColor
+  display: inline-block
+
+  padding: 0.8rem 1.8rem
+  margin: 0 0.4rem
+
+  border-radius: 9em
+

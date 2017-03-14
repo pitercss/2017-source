@@ -1,13 +1,129 @@
 include pug/_common.pug
 
-+Page._PreLanding
++Page
   +Header({ isIndex: true, menu: data.menu })
 
-  +b.Content(role="main")
-    +e.Banner
-      h1
-        abbr(title="Saint Petersburg") saint-p
-        = " summer css"
-      h2 June 16th, 2017
+  +e.Content(role="main")
+    +b.Section_Landing.Content
+      +e.Banner
+        h1
+          abbr(title="Saint Petersburg") saint-p
+          = " summer css"
+        h2 June 16th, 2017
+
+    +b.Section_Mission.Content
+      +e.Banner
+        h1
+          = "mission "
+          small= "and Lifestyle"
+
+        p.is-large pitercss conference provides the opportunity to be part of the global frontend development community
+
+
+    //- +b.Section.Content
+    //-   h2 Schedule
+
+    //- +b.Section.Content
+    //-   h2 It will be cool!
+
+    +b.Section_Badge.Content#Ticket
+      +e.BadgeWrap.is-wider
+        +e.BadgeForm
+          h1
+            = "make your badge"
+
+            small
+              = "with personal color id "
+              +b.SPAN.BadgeColor(style="background-color:#DF665D;color:#FFF")
+                = "#DF665D"
+
+          +b.FORM.Form
+            +e.LABEL.Label
+              +e.INPUT.Input.ui-Input.is-valid(value="konstantin")
+              +e.Label-Text= "first name"
+              +e.Status
+                +svg-icon('Valid')
+                +svg-icon('Error')
+            +e.LABEL.Label
+              +e.INPUT.Input.ui-Input
+              +e.Label-Text= "last name"
+              +e.Status
+                +svg-icon('Valid')
+                +svg-icon('Error')
+            +e.LABEL.Label
+              +e.INPUT.Input.ui-Input
+              +e.Label-Text= "company"
+              +e.Status
+                +svg-icon('Valid')
+                +svg-icon('Error')
+            +e.LABEL.Label
+              +e.INPUT.Input.ui-Input.with-error
+              +e.Label-Text= "e-mail"
+              +e.Status
+                +svg-icon('Valid')
+                +svg-icon('Error')
+              +e.Label-Error= "We can not send this address confirmation"
+
+            +e.Badge.Section-Badge
+              +b.Badge
+                +svg-icon('Logo_ticket')
+                +e.Name= "konstantin"
+                +e.Name= "konstantinopolskiy"
+                +e.Info= "jet brains"
+                +e.Info= "#df665d"
+                +svg-icon('Logo_ticketClose')
+                +e.Label(style="background-color:#DF665D")
+
+            +e.PaymentSystem-
+              +e.LABEL.Item
+                +e.INPUT.Input(name="PaymentSystem", type="radio", checked=true)
+                +e.View
+                  +svg-icon('YandexKassa', "Яндекс.Касса")
+              +e.LABEL.Item
+                +e.INPUT.Input(name="PaymentSystem", type="radio")
+                +e.View
+                  +svg-icon('PayPal', "PayPal")
+
+            +e.CachlessInfo.ui-Link-(href="#x")
+              +svg-icon('Info')
+              +e.Content= "about cashless payment"
+
+            +e.INPUT.Input.-Promo.ui-Input(placeholder="promo code")
+            +e.BUTTON.Action.ui-Button_Action
+              = "Buy  ticket for 1699 ₽"
+
+            +b.PriceInfo
+              +e.INPUT.Controller#PriceInfoController(type="radio")
+              +e.Content
+                +e.LABEL.Close(for="PriceInfoController")
+                  +svg-icon('Close', "Close")
+                +e.DL.PriceChange-
+                  +e.DT.When= "today, 23 april"
+                  +e.DD.What= "3 days till price increase. Hurry up!"
+                  +e.DT.When= "1 may"
+                  +e.DD.What= "2500 ₽"
+
+            +e.Disclaimer
+              = "Pressing the button you accept "
+              +b.ui-Link(href="#x"): +e.Content= "the terms of use"
+              = " and "
+              +b.ui-Link(href="#x"): +e.Content= "Code of Conduct"
+
+    +b.Section_SpeakAndConduct.Content
+      +b.ui-Cols.is-wider
+        +e.Item
+          h2 Wanna be a speaker?
+          p We’re inviting you to submit a talk or idea for pitercss_conf on June 16th, 2017 in St. Petersburg, Russia. We speak English and have a code of conduct. Topics: HTML, CSS, SVG, etc. Decision won’t take long. We’ll help you to prepare your talk and cover all expenses, such as travel and accommodation. Submission is open until April 30th.
+
+          +b.ui-Button_Bright(href="/call-for-speakers/")= "Submit a talk"
+
+        +e.Item
+          +b.ui-Block
+            h4 Code of Conduct
+            p All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
+          +b.ui-Link_Bright(href="/code-of-conduct/")= "Read all code of conduct"
+
+    //- +b.Section.Content
+    //-   h2 Thanks to all these people
 
   +Footer({ isIndex: true, menu: data.footerMenu })

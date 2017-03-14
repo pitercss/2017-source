@@ -43,11 +43,30 @@
     &-City
       font-family: $Fonts.Bold
 
+  &-ActionWrap
+    +at-large()
+      margin-top: -4px
+      margin-left: 1.5rem
+
+    +at-small()
+      margin-left: auto
+
+  &-ActionDescription
+    margin-top: 1rem
+
+    font-size: 1.4rem
+    line-height: 1
+
+    color: $Colors.ActionButton
+
+    +at-small()
+      display: none
+
   &-Action
+    display: block
     height: $Sizes.NavActionHeight
     line-height: @height
-    margin-top: -4px
-    margin-left: 1.5rem
+    text-align: center
 
     +at-small()
       height: 6.4rem
