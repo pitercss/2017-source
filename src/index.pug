@@ -20,8 +20,49 @@ include pug/_common.pug
         p.is-large pitercss conference provides the opportunity to be part of the global frontend development community
 
 
-    //- +b.Section.Content
-    //-   h2 Schedule
+    +b.Section_Schedule.Content
+      h1.is-wider
+        small= "preliminary"
+        = " schedule"
+
+      +b.TABLE.Schedule.is-wider
+        +e.TBODY.Body
+          each item in data.schedule
+            +e.TR.Item(id = item.id || false, class = item.type ? '_' + item.type : false)
+              +e.TH.Cell_left
+                if item.time
+                  = item.time
+
+              +e.TD.Cell_middle
+                if item.name || item.company
+                  h3
+                    if item.name
+                      +e.SPAN.Name= item.name
+                    if item.company
+                      +e.SPAN.Company= item.company
+
+                if item.title
+                  h4= item.title
+
+                if item.picture
+                  +e.Picture.AdditionalInfo(src=item.picture, alt="")
+
+                if item.info
+                  p.AdditionalInfo= item.info
+
+                if item.links
+                  +e.Links.AdditionalInfo
+                    each link in item.links
+                      p.AdditionalInfo
+                        +b.ui-Link_Bright(href=link.link)= link.title
+
+              if item.id
+                +e.TD.Cell_right
+                  +e.Toggler-
+                    +e.On(href="#" + item.id)
+                      +svg-icon('TogglerOn')
+                    +e.Off(href="#x")
+                      +svg-icon('TogglerOff')
 
     //- +b.Section.Content
     //-   h2 It will be cool!

@@ -1,6 +1,7 @@
 include ../pug/_common.pug
 
-- delete data.footerMenu[1].href
+- delete data.menu[0].href
+- delete data.footerMenu[0].href
 
 +Page({ title: "Call for Speakers" })._CfS
   +Header({ menu: data.menu, actionIsHidden: true })

@@ -27,6 +27,8 @@
       padding-top: $Sizes.HeaderHeight
 
   &-Content
+    position: relative
+    z-index: $z-index.ground
     box-sizing: border-box
     min-height: "calc(100vh - %s)" % ($Sizes.HeaderHeight + $Sizes.FooterHeight + $Sizes.FooterPadding)
 

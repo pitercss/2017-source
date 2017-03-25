@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>+</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="btn/list/close" transform="translate(-8.000000, -8.000000)" fill="#FF0195">
+            <polygon id="+" transform="translate(19.720000, 19.552000) rotate(45.000000) translate(-19.720000, -19.552000) " points="17.648 33.104 21.792 33.104 21.792 21.568 33.44 21.568 33.44 17.536 21.792 17.536 21.792 6 17.648 6 17.648 17.536 6 17.536 6 21.568 17.648 21.568"></polygon>
+        </g>
+    </g>
+</svg>
