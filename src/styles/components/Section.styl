@@ -12,8 +12,6 @@
 
   &_Landing.Content
     display: flex
-
-    min-height: "calc(100vh - %s)" % ($Sizes.HeaderHeight + $Sizes.FooterHeight + $Sizes.FooterPadding)
     padding: 0
 
     background: $Colors.PreLanding
@@ -24,14 +22,8 @@
       align-items: center
       position: relative
 
-      background: url('images/Scissors.jpg') 100% 50% no-repeat
+      background: url('images/Scissors.jpg') 100% 10px no-repeat
       background-size: 325px 850px
-
-      +at-tall()
-        background-position: 100% 10px
-
-    +at-tall()
-      background-position: 100% 10px
 
     & ::selection
       background: $_BrandColors.Purple
