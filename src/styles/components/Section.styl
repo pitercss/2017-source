@@ -68,8 +68,12 @@
 
     +at-large()
       padding-bottom: 9.5rem
-      background-image: linear-gradient(to right, transparent ('calc(50% + %s - %s)' % (0.5*$Sizes.PageWidth 0.5*$Sizes.BadgeWidth)), $_BrandColors.Green 0),
-                        linear-gradient(to right, transparent ('calc(100% - %s - 2.5rem)' % (0.5*$Sizes.BadgeWidth)), $_BrandColors.Green 0)
+      background-image: linear-gradient(to right, transparent (0.5*$Sizes.PageWidth - 0.5*$Sizes.BadgeWidth), $_BrandColors.Green 0),
+                        linear-gradient(to right, $_BrandColors.Green, $_BrandColors.Green)
+      background-size: 50% 100%, (0.5*$Sizes.BadgeWidth + 25px) 100%
+      background-repeat: no-repeat,no-repeat
+      background-position: 100%,100%
+
 
   &-BadgeWrap
     position: relative
