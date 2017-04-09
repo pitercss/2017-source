@@ -164,7 +164,27 @@ include pug/_common.pug
             p All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
           +b.ui-Link_Bright(href="/code-of-conduct/")= "Read all code of conduct"
 
-    //- +b.Section.Content
-    //-   h2 Thanks to all these people
+    +b.Section_Sponsors.Content
+      h1.is-wider thanks to all these people
+      p These sponsors, without whom our holiday would not take place. <br/> You can also.
+      +e.UL.Sponsors-.is-wider
+        +e.Item
+          +e.Link(href="#x")
+            +e.Image(src="http://placehold.it/94x29")
+        +e.Item
+          +e.Link(href="#x")
+            +e.Image(src="http://placehold.it/140x51")
+        +e.Item
+          +e.Link(href="#x")
+            +svg-icon('Logo').-Image
+        +e.Item
+          +e.Link(href="#x")
+            +e.Image(src="http://placehold.it/188x54")
+        +e.Item
+          +e.Link(href="#x")
+            +e.Image(src="http://placehold.it/203x52")
+
+      p
+        +b.ui-Button_Bright(href="https://pitercss.com/sponsorship-ru.pdf")= "I want to become a sponsor"
 
   +Footer({ isIndex: true, menu: data.footerMenu })
